@@ -42,6 +42,8 @@ Simply type:
 
 ```bash
 julia
+```
+
 
 #### Option B: From inside Visual Studio Code
 
@@ -56,9 +58,10 @@ VS Code will open a terminal panel with the Julia REPL running.
 
 Once the REPL is open, enter the following commands:
 
-```julia
+```bash
 using Pkg
 Pkg.add("Dynare")
+```
 
 ### 2.3 First-Time Use
 
@@ -66,7 +69,9 @@ After installing Dynare.jl, test that the package loads correctly.
 
 In the Julia REPL, type:
 
+```bash
 using Dynare
+```
 
 Note: The first time you use the package, Julia will precompile it. This may take a minute.
 
@@ -79,13 +84,54 @@ This ensures that all changes take effect properly, especially when adding new p
 
 To verify which version of Dynare was installed, run:
 
+```bash
 Pkg.status("Dynare")
+```
 
 You should see an output like:
 
+```bash
 Dynare v0.9.18
+```
 
 This confirms the package is installed and active in your Julia environment.
+
+### 2.5 Install Required Julia Packages for Modeling
+
+In addition to `Dynare`, you will need several additional Julia packages for typical modeling workflows:
+
+- `PATHSolver` — used for solving models with complementarity conditions
+- `DataFrames` — for structured data manipulation
+- `Dates` — to handle time-based elements like periods or ranges
+- `Plots` — for generating charts and visualizations
+
+---
+
+#### Step 1: Launch Julia
+
+In your terminal, start Julia by typing:
+
+```bash
+julia
+```
+
+#### Step 2: Install the required packages
+Once the Julia REPL opens, run the following commands:
+```bash
+using Pkg
+Pkg.add([
+    "PATHSolver",
+    "DataFrames",
+    "Dates",
+    "Plots"
+])
+```
+
+#### Step 3: Test the installation
+To verify that everything is working, enter:
+```bash
+using PATHSolver, DataFrames, Dates, Plots
+```
 
 
 
