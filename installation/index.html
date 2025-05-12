@@ -997,16 +997,12 @@ setenv PATH_LICENSE_STRING "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&
 <h4 id="macos-linux-terminal-method">🍎 macOS / Linux (terminal method)</h4>
 <ol>
 <li>Open a terminal.</li>
-<li>Create the Julia config folder if it doesn't exist:</li>
-</ol>
-<pre><code class="language-bash">mkdir -p ~/.julia/config
-</code></pre>
-<ol>
-<li>Open the <code>startup.jl</code> file in your preferred text editor (e.g., nano, vim, or VS Code):</li>
-</ol>
-<pre><code class="language-bash">nano ~/.julia/config/startup.jl
-</code></pre>
-<ol>
+<li>Create the Julia config folder if it doesn't exist:
+<code>bash
+mkdir -p ~/.julia/config</code></li>
+<li>Open the <code>startup.jl</code> file in your preferred text editor (e.g., nano, vim, or VS Code):
+<code>bash
+nano ~/.julia/config/startup.jl</code></li>
 <li>Paste this line into the file:
 <code>julia
 ENV["PATH_LICENSE_STRING"] = "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0"</code></li>
