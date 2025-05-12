@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#getting-started" class="md-skip">
+        <a href="#getting-started-with-dynarejulia" class="md-skip">
           Skip to content
         </a>
       
@@ -225,6 +225,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -236,6 +249,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-download-julia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download Julia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Download Julia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 For Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🍎 For macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐧 For Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Testing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -393,6 +476,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-download-julia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Download Julia
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 1: Download Julia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#for-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 For Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-macos" class="md-nav__link">
+    <span class="md-ellipsis">
+      🍎 For macOS
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      🐧 For Linux
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Testing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -407,8 +549,50 @@
 
 
 
-<h1 id="getting-started">getting started</h1>
-<p>This page is under construction.</p>
+<h1 id="getting-started-with-dynarejulia">Getting Started with DynareJulia</h1>
+<p>This section will walk you through installing <strong>Julia</strong> — the foundational language for running DynareJulia.</p>
+<hr />
+<h2 id="step-1-download-julia">Step 1: Download Julia</h2>
+<p>DynareJulia currently requires <strong>Julia version 1.9.4</strong> for compatibility and performance reasons.</p>
+<blockquote>
+<p>🛠️ You must install <strong>version 1.9.4</strong>, not the latest version.</p>
+</blockquote>
+<p>To download it:</p>
+<p>👉 Visit the <a href="https://julialang.org/downloads/oldreleases/">Julia Old Releases Page</a></p>
+<p>Then scroll down to find: 
+Version 1.9.4 (released on 2023-12-21)</p>
+<p>Select the appropriate installer based on your operating system:</p>
+<h3 id="for-windows">💻 For Windows</h3>
+<ul>
+<li>Click on: <code>julia-1.9.4-win64.exe</code> (or <code>julia-1.9.4-win32.exe</code> if using 32-bit)</li>
+<li>Run the installer</li>
+<li>Accept default settings (you can check “Add Julia to PATH” if available)</li>
+</ul>
+<h3 id="for-macos">🍎 For macOS</h3>
+<ul>
+<li>Click on: <code>julia-1.9.4-mac64.dmg</code></li>
+<li>Open the <code>.dmg</code> file and drag <strong>Julia</strong> into your <code>Applications</code> folder</li>
+</ul>
+<h3 id="for-linux">🐧 For Linux</h3>
+<ul>
+<li>Download the <code>julia-1.9.4-linux-x86_64.tar.gz</code></li>
+<li>Extract it using your terminal:</li>
+</ul>
+<p>```bash
+tar -xvzf julia-1.9.4-linux-x86_64.tar.gz
+sudo mv julia-1.9.4 /opt/
+sudo ln -s /opt/julia-1.9.4/bin/julia /usr/local/bin/julia</p>
+<h2 id="step-2-testing">Step 2: Testing</h2>
+<p>After installing Julia you can click on the icon and you will see somethiong like:</p>
+<pre><code>           _
+_       _ _(_)_     |  Documentation: https://docs.julialang.org
+</code></pre>
+<p>(<em>)     | (</em>) (<em>)    |
+    _ _   </em>| |<em>  __ _   |  Version 1.9.4
+   | | | | | | |/ </em>` |  |
+   | | |<em>| | | | (</em>| |  |  Official https://julialang.org/ release
+  <em>/ |_</em>'<em>|</em>|<em>|_</em>'_|  |
+ |__/</p>
 
 
 
