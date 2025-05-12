@@ -56,7 +56,7 @@ We recommend it for writing and managing Julia code, editing `.mod` model files,
 
 ### 💻 Install Instructions by OS
 
-💻 #### Windows
+#### 💻 Windows
 
 - Run the downloaded `.exe` file
 - During setup:
@@ -64,7 +64,7 @@ We recommend it for writing and managing Julia code, editing `.mod` model files,
   - ✅ Enable **“Open with Code”** in the right-click context menu
 - Complete the installation by clicking **Next** through the installer
 
-🍎 #### macOS
+#### 🍎 macOS
 
 - Open the downloaded `.dmg` file
 - Drag the **Visual Studio Code** icon into your `Applications` folder
@@ -77,7 +77,7 @@ To enable full Julia support in VS Code — including syntax highlighting, inter
 
 ---
 
-### How to Install the Julia Extension
+### 4.1 How to Install the Julia Extension
 
 1. Open **Visual Studio Code**
 2. Click on the **Extensions icon** in the left sidebar (or press `Ctrl+Shift+X`)
@@ -92,7 +92,7 @@ To enable full Julia support in VS Code — including syntax highlighting, inter
 
 ---
 
-### First-Time Setup
+### 4.2 First-Time Setup
 
 After installing the extension:
 
@@ -131,7 +131,6 @@ To check if it's working:
 1. Create a new file and save it as `test.jl`
 2. Add:
 
-```julia
 println("Hello from Julia in VS Code!")
 
 
