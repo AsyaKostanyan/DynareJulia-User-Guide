@@ -37,7 +37,7 @@ Select the appropriate installer based on your operating system:
 ![Julia 1.9.4 Download Section](julia.png)
 
 
-## 🖥️ Step 3: Install Visual Studio Code (VS Code)
+🖥️ Step 3: Install Visual Studio Code (VS Code)
 
 [Visual Studio Code (VS Code)](https://code.visualstudio.com/) is a lightweight and powerful code editor.  
 We recommend it for writing and managing Julia code, editing `.mod` model files, and building this documentation.
@@ -69,4 +69,70 @@ We recommend it for writing and managing Julia code, editing `.mod` model files,
 - Open the downloaded `.dmg` file
 - Drag the **Visual Studio Code** icon into your `Applications` folder
 - Open VS Code from the Applications menu or using Spotlight (`Cmd + Space`, then type "Code")
+
+
+## Step 4: Install the Julia Extension in VS Code
+
+To enable full Julia support in VS Code — including syntax highlighting, interactive REPL, inline plots, variable browser, and more — you need to install the official **Julia extension**.
+
+---
+
+### How to Install the Julia Extension
+
+1. Open **Visual Studio Code**
+2. Click on the **Extensions icon** in the left sidebar (or press `Ctrl+Shift+X`)
+3. In the search bar at the top, type: **Julia**
+
+4. Look for the extension published by **Julia Language** — it should appear first in the list
+
+- **Name**: *Julia*
+- **Publisher**: Julia Language
+
+5. Click the **Install** button
+
+---
+
+### First-Time Setup
+
+After installing the extension:
+
+1. **Open a Julia file**, or click `View → Command Palette` (`Ctrl+Shift+P`)
+2. Type: **Execute Active File**
+3. VS Code will prompt you to select the **Julia executable path**  
+(if it doesn't auto-detect it)
+4. Browse to the path where Julia 1.9.4 is installed:
+
+- On Windows (default):
+
+  ```
+  C:\Users\<YourUsername>\AppData\Local\Programs\Julia-1.9.4\bin\julia.exe
+  ```
+
+- On macOS:
+
+  ```
+  /Applications/Julia-1.9.app/Contents/Resources/julia/bin/julia
+  ```
+
+- On Linux (if installed via tarball):
+
+  ```
+  /opt/julia-1.9.4/bin/julia
+  ```
+
+5. Select the correct path → the extension will configure automatically
+
+---
+
+### ✅ Verify Julia REPL Integration
+
+To check if it's working:
+
+1. Create a new file and save it as `test.jl`
+2. Add:
+
+```julia
+println("Hello from Julia in VS Code!")
+
+
 
