@@ -432,6 +432,72 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#26-configure-the-path-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Configure the PATH License
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Configure the PATH License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-obtain-the-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Obtain the license
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-the-license-to-your-startupjl-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add the license to your startup.jl file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-by-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions by Platform
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions by Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-file-explorer-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Windows (File Explorer method)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos-linux-terminal-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      🍎 macOS / Linux (terminal method)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -726,6 +792,72 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#26-configure-the-path-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 Configure the PATH License
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 Configure the PATH License">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-obtain-the-license" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Obtain the license
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-add-the-license-to-your-startupjl-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Add the license to your startup.jl file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instructions-by-platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions by Platform
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions by Platform">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-file-explorer-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      💻 Windows (File Explorer method)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#macos-linux-terminal-method" class="md-nav__link">
+    <span class="md-ellipsis">
+      🍎 macOS / Linux (terminal method)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -829,6 +961,59 @@ Pkg.add([
 <p>To verify that everything is working, enter:</p>
 <pre><code class="language-bash">using PATHSolver, DataFrames, Dates, Plots
 </code></pre>
+<h3 id="26-configure-the-path-license">2.6 Configure the PATH License</h3>
+<p>Dynare uses the <a href="https://pages.cs.wisc.edu/~ferris/path.html">PATH solver</a> by S. Dirkse, M.C. Ferris, and T. Munson — as accessed through <code>PATHSolver.jl</code> — to solve perfect foresight models with occasionally binding constraints.</p>
+<p>To use it, you need to register the free license key in your Julia startup file.</p>
+<hr />
+<h4 id="1-obtain-the-license">1. Obtain the license</h4>
+<p>The license is publicly available at:</p>
+<p>https://pages.cs.wisc.edu/~ferris/path/LICENSE</p>
+<p>For convenience, here is the license string:
+setenv PATH_LICENSE_STRING "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0"</p>
+<h4 id="2-add-the-license-to-your-startupjl-file">2. Add the license to your <code>startup.jl</code> file</h4>
+<p>Create a file named <code>startup.jl</code> and add the following line:</p>
+<pre><code class="language-julia">ENV[&quot;PATH_LICENSE_STRING&quot;] = &quot;2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0&quot;
+</code></pre>
+<h3 id="instructions-by-platform">Instructions by Platform</h3>
+<hr />
+<h4 id="windows-file-explorer-method">💻 Windows (File Explorer method)</h4>
+<ol>
+<li>Open File Explorer and go to your user folder (e.g., <code>C:\Users\YourName</code>).</li>
+<li>Navigate to the <code>.julia</code> folder and create a new folder named <code>config</code> if it doesn't already exist.</li>
+<li>Inside <code>.julia\config</code>, create a new text file:</li>
+<li>Right-click → <strong>New</strong> → <strong>Text Document</strong></li>
+<li>Open the new file and paste the following line:</li>
+</ol>
+<p><code>julia
+   ENV["PATH_LICENSE_STRING"] = "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0"</code></p>
+<ol>
+<li>Save the file:</li>
+<li>Go to <strong>File → Save As</strong></li>
+<li>In <strong>Save as type</strong>, choose <strong>All Files</strong></li>
+<li>In <strong>File name</strong>, type: <code>startup.jl</code></li>
+<li>Click <strong>Save</strong></li>
+</ol>
+<hr />
+<h4 id="macos-linux-terminal-method">🍎 macOS / Linux (terminal method)</h4>
+<ol>
+<li>Open a terminal.</li>
+<li>Create the Julia config folder if it doesn't exist:</li>
+</ol>
+<p><code>bash
+   mkdir -p ~/.julia/config</code></p>
+<ol>
+<li>Open the <code>startup.jl</code> file in your preferred text editor (e.g., nano, vim, or VS Code):</li>
+</ol>
+<p><code>bash
+nano ~/.julia/config/startup.jl</code></p>
+<ol>
+<li>Paste this line into the file:</li>
+</ol>
+<p><code>julia
+ENV["PATH_LICENSE_STRING"] = "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0"</code></p>
+<ol>
+<li>Save and close the file.</li>
+</ol>
 
 
 
