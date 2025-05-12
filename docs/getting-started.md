@@ -34,7 +34,5 @@ Select the appropriate installer based on your operating system:
 
 ## Step 2: Testing
 
-<p align="center">
-  <img src="julia.png" alt="Julia 1.9.4 Download Section" width="700">
-</p>
+![Julia 1.9.4 Download Section](julia.png)
 
