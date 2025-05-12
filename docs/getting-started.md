@@ -36,3 +36,37 @@ Select the appropriate installer based on your operating system:
 
 ![Julia 1.9.4 Download Section](julia.png)
 
+
+## 🖥️ Step 3: Install Visual Studio Code (VS Code)
+
+[Visual Studio Code (VS Code)](https://code.visualstudio.com/) is a lightweight and powerful code editor.  
+We recommend it for writing and managing Julia code, editing `.mod` model files, and building this documentation.
+
+---
+
+### 📥 Download VS Code
+
+1. Go to the official [VS Code download page](https://code.visualstudio.com/Download)
+2. Choose your operating system:
+   - **Windows**: Click on the `.exe` installer
+   - **macOS**: Choose the `.zip` or `.dmg` version
+   - **Linux**: Download the `.deb` or `.rpm` file
+
+---
+
+### 💻 Install Instructions by OS
+
+#### Windows
+
+- Run the downloaded `.exe` file
+- During setup:
+  - ✅ Enable **“Add to PATH”**
+  - ✅ Enable **“Open with Code”** in the right-click context menu
+- Complete the installation by clicking **Next** through the installer
+
+#### macOS
+
+- Open the downloaded `.dmg` file
+- Drag the **Visual Studio Code** icon into your `Applications` folder
+- Open VS Code from the Applications menu or using Spotlight (`Cmd + Space`, then type "Code")
+
