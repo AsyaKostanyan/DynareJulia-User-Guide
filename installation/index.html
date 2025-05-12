@@ -390,6 +390,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#25-install-required-julia-packages-for-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Install Required Julia Packages for Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Install Required Julia Packages for Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-launch-julia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Launch Julia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-install-the-required-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Install the required packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test the installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -642,6 +684,48 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#25-install-required-julia-packages-for-modeling" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Install Required Julia Packages for Modeling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Install Required Julia Packages for Modeling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-launch-julia" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Launch Julia
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-install-the-required-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Install the required packages
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-test-the-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Test the installation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -718,6 +802,33 @@ This ensures that all changes take effect properly, especially when adding new p
 <pre><code class="language-bash">Dynare v0.9.18
 </code></pre>
 <p>This confirms the package is installed and active in your Julia environment.</p>
+<h3 id="25-install-required-julia-packages-for-modeling">2.5 Install Required Julia Packages for Modeling</h3>
+<p>In addition to <code>Dynare</code>, you will need several additional Julia packages for typical modeling workflows:</p>
+<ul>
+<li><code>PATHSolver</code> — used for solving models with complementarity conditions</li>
+<li><code>DataFrames</code> — for structured data manipulation</li>
+<li><code>Dates</code> — to handle time-based elements like periods or ranges</li>
+<li><code>Plots</code> — for generating charts and visualizations</li>
+</ul>
+<hr />
+<h4 id="step-1-launch-julia">Step 1: Launch Julia</h4>
+<p>In your terminal, start Julia by typing:</p>
+<pre><code class="language-bash">julia
+</code></pre>
+<h4 id="step-2-install-the-required-packages">Step 2: Install the required packages</h4>
+<p>Once the Julia REPL opens, run the following commands:</p>
+<pre><code class="language-bash">using Pkg
+Pkg.add([
+    &quot;PATHSolver&quot;,
+    &quot;DataFrames&quot;,
+    &quot;Dates&quot;,
+    &quot;Plots&quot;
+])
+</code></pre>
+<h4 id="step-3-test-the-installation">Step 3: Test the installation</h4>
+<p>To verify that everything is working, enter:</p>
+<pre><code class="language-bash">using PATHSolver, DataFrames, Dates, Plots
+</code></pre>
 
 
 
