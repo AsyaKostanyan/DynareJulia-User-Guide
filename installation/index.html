@@ -984,8 +984,8 @@ setenv PATH_LICENSE_STRING "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&
 <li>Right-click → <strong>New</strong> → <strong>Text Document</strong></li>
 <li>Open the new file and paste the following line:</li>
 </ol>
-<p><code>julia
-   ENV["PATH_LICENSE_STRING"] = "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0"</code></p>
+<pre><code class="language-julia">ENV[&quot;PATH_LICENSE_STRING&quot;] = &quot;2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0&quot;
+</code></pre>
 <ol>
 <li>Save the file:</li>
 <li>Go to <strong>File → Save As</strong></li>
@@ -999,13 +999,13 @@ setenv PATH_LICENSE_STRING "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&
 <li>Open a terminal.</li>
 <li>Create the Julia config folder if it doesn't exist:</li>
 </ol>
-<p><code>bash
-   mkdir -p ~/.julia/config</code></p>
+<pre><code class="language-bash">mkdir -p ~/.julia/config
+</code></pre>
 <ol>
 <li>Open the <code>startup.jl</code> file in your preferred text editor (e.g., nano, vim, or VS Code):</li>
 </ol>
-<p><code>bash
-nano ~/.julia/config/startup.jl</code></p>
+<pre><code class="language-bash">nano ~/.julia/config/startup.jl
+</code></pre>
 <ol>
 <li>Paste this line into the file:</li>
 </ol>
