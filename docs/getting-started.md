@@ -30,22 +30,11 @@ Select the appropriate installer based on your operating system:
 
 ### 🐧 For Linux
 - Download the `julia-1.9.4-linux-x86_64.tar.gz`
-- Extract it using your terminal:
-
-```bash
-tar -xvzf julia-1.9.4-linux-x86_64.tar.gz
-sudo mv julia-1.9.4 /opt/
-sudo ln -s /opt/julia-1.9.4/bin/julia /usr/local/bin/julia
+- Extract it using your terminal
 
 ## Step 2: Testing
 
-After installing Julia you can click on the icon and you will see somethiong like:
+<p align="center">
+  <img src="julia.png" alt="Julia 1.9.4 Download Section" width="700">
+</p>
 
-               _
-    _       _ _(_)_     |  Documentation: https://docs.julialang.org
-   (_)     | (_) (_)    |
-    _ _   _| |_  __ _   |  Version 1.9.4
-   | | | | | | |/ _` |  |
-   | | |_| | | | (_| |  |  Official https://julialang.org/ release
-  _/ |\__'_|_|_|\__'_|  |
- |__/
