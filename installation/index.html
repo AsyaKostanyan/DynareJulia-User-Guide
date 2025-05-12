@@ -698,22 +698,25 @@ VS Code will open a terminal panel with the Julia REPL running.</li>
 <hr />
 <h3 id="22-add-the-dynarejl-package">2.2 Add the Dynare.jl package</h3>
 <p>Once the REPL is open, enter the following commands:</p>
-<p>```julia
-using Pkg
-Pkg.add("Dynare")</p>
+<pre><code class="language-bash">using Pkg
+Pkg.add(&quot;Dynare&quot;)
+</code></pre>
 <h3 id="23-first-time-use">2.3 First-Time Use</h3>
 <p>After installing Dynare.jl, test that the package loads correctly.</p>
 <p>In the Julia REPL, type:</p>
-<p>using Dynare</p>
+<pre><code class="language-bash">using Dynare
+</code></pre>
 <p>Note: The first time you use the package, Julia will precompile it. This may take a minute.</p>
 <p><strong>Recommendation:</strong> After installing packages, it is good practice to restart your Julia REPL or VS Code terminal.<br />
 This ensures that all changes take effect properly, especially when adding new packages or changing environments.</p>
 <hr />
 <h3 id="24-optional-check-the-installed-version">2.4 Optional: Check the Installed Version</h3>
 <p>To verify which version of Dynare was installed, run:</p>
-<p>Pkg.status("Dynare")</p>
+<pre><code class="language-bash">Pkg.status(&quot;Dynare&quot;)
+</code></pre>
 <p>You should see an output like:</p>
-<p>Dynare v0.9.18</p>
+<pre><code class="language-bash">Dynare v0.9.18
+</code></pre>
 <p>This confirms the package is installed and active in your Julia environment.</p>
 
 
