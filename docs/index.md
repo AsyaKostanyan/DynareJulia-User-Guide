@@ -48,5 +48,4 @@ Use the navigation bar to explore topics such as:
 
 Happy modeling!
 
-# index
 
