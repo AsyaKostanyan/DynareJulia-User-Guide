@@ -9,6 +9,6 @@ nav:
   - Video Tutorials: video-tutorials.md
   - Simple Model: simple-model.md
   - ENDOCRED: endocred.md
-  - GIMF: gimf.mdgit add mkdocs.yml docs/simple-model.md docs/endocred.md docs/gimf.md
+  - GIMF: gimf.md
   - Potential Errors: potential-errors.md   
   - FAQ: faq.md
