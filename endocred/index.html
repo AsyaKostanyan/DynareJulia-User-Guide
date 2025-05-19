@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#endocred" class="md-skip">
+        <a href="#ndocred-model-simulations" class="md-skip">
           Skip to content
         </a>
       
@@ -313,6 +313,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ENDOCRED
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -324,6 +337,43 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#included-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Included Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ How to Run
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -415,6 +465,32 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#included-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Included Files
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ How to Run
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -429,8 +505,26 @@
 
 
 
-<h1 id="endocred">endocred</h1>
-<p>This page is under construction.</p>
+<h1 id="ndocred-model-simulations">NDOCRED Model Simulations</h1>
+<p>This example shows how to run and compare multiple economic scenarios using DynareJulia and visualise results in a 2×2 grid.</p>
+<hr />
+<h2 id="included-files">Included Files</h2>
+<p>These are the model and script files:</p>
+<ul>
+<li><a href="../models/MARKET_2025Q1.mod"><code>MARKET_2025Q1.mod</code></a></li>
+<li><a href="../models/Case_A_2025Q1.mod"><code>Case_A_2025Q1.mod</code></a></li>
+<li><a href="../models/Case_B_2025Q1.mod"><code>Case_B_2025Q1.mod</code></a></li>
+<li><a href="../models/SCENARIOS_2025Q1.jl"><code>SCENARIOS_2025Q1.jl</code></a></li>
+</ul>
+<p>Download them and place all four in the same project directory.</p>
+<hr />
+<h2 id="how-to-run">▶️ How to Run</h2>
+<ol>
+<li>Activate your project environment (or create one):</li>
+</ol>
+<pre><code class="language-julia">using Pkg
+Pkg.activate(&quot;venv&quot;)  # or your preferred environment path
+</code></pre>
 
 
 
