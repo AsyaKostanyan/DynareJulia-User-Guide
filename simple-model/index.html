@@ -340,6 +340,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#running-the-model-in-julia" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ Running the Model in Julia
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -471,6 +480,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#running-the-model-in-julia" class="md-nav__link">
+    <span class="md-ellipsis">
+      ▶️ Running the Model in Julia
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -509,21 +527,18 @@ check;
 
 stoch_simul(order = 1, irf = 25);
 
-**Description:**
-
-- `PIE`, `R`, and `Y` are endogenous variables.
-- `eps_Y` is an exogenous shock.
-- The model has both forward- and backward-looking components.
-- We use `stoch_simul` to simulate impulse response functions (IRFs).
-
-## ▶️ Running the Model in Julia
-
-Once you have `Dynare.jl` installed, you can run the model using the `@dynare` macro. This macro handles the entire process of parsing, solving, and simulating the model.
-
-Create a Julia script named `run_simple.jl` and include the following code:
-
-```julia
-using Dynare
+</code></pre>
+<p><strong>Description:</strong></p>
+<ul>
+<li><code>PIE</code>, <code>R</code>, and <code>Y</code> are endogenous variables.</li>
+<li><code>eps_Y</code> is an exogenous shock.</li>
+<li>The model has both forward- and backward-looking components.</li>
+<li>We use <code>stoch_simul</code> to simulate impulse response functions (IRFs).</li>
+</ul>
+<h2 id="running-the-model-in-julia">▶️ Running the Model in Julia</h2>
+<p>Once you have <code>Dynare.jl</code> installed, you can run the model using the <code>@dynare</code> macro. This macro handles the entire process of parsing, solving, and simulating the model.</p>
+<p>Create a Julia script named <code>run_simple.jl</code> and include the following code:</p>
+<pre><code class="language-julia">using Dynare
 
 context = @dynare &quot;models/simple.mod&quot;;
 </code></pre>
