@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#basic-usage" class="md-skip">
+        <a href="#simple-model" class="md-skip">
           Skip to content
         </a>
       
@@ -291,6 +291,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Simple Model
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -302,6 +315,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dynare-model-file-simplemod" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Dynare Model File (simple.mod)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -415,6 +456,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dynare-model-file-simplemod" class="md-nav__link">
+    <span class="md-ellipsis">
+      📄 Dynare Model File (simple.mod)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -429,8 +487,52 @@
 
 
 
-<h1 id="basic-usage">basic usage</h1>
-<p>This page is under construction.</p>
+<h1 id="simple-model">🧪 Simple Model</h1>
+<p>This page demonstrates how to run a basic macroeconomic model in DynareJulia using a <code>.mod</code> file and the <code>@dynare</code> macro.</p>
+<hr />
+<h2 id="dynare-model-file-simplemod">📄 Dynare Model File (<code>simple.mod</code>)</h2>
+<pre><code class="language-mod">var PIE, R, Y;
+
+varexo eps_Y;
+
+model;
+  PIE = 0.5*PIE(-1) + 0.5*PIE(+1) + 0.5*Y;
+  Y   = 0.5*Y(-1) + 0.5*Y(+1) - 0.2*R + eps_Y;
+  R   = 1.5*PIE(+1) + 0.2*Y;
+end;
+
+shocks;
+  var eps_Y; stderr 0.01;
+end;
+
+check;
+
+stoch_simul(order = 1, irf = 25);
+
+**Description:**
+
+- `PIE`, `R`, and `Y` are endogenous variables.
+- `eps_Y` is an exogenous shock.
+- The model has both forward- and backward-looking components.
+- We use `stoch_simul` to simulate impulse response functions (IRFs).
+
+## ▶️ Running the Model in Julia
+
+Once you have `Dynare.jl` installed, you can run the model using the `@dynare` macro. This macro handles the entire process of parsing, solving, and simulating the model.
+
+Create a Julia script named `run_simple.jl` and include the following code:
+
+```julia
+using Dynare
+
+context = @dynare &quot;models/simple.mod&quot;;
+</code></pre>
+<p><strong>This will:</strong></p>
+<ul>
+<li>Load and solve the model defined in <code>simple.mod</code></li>
+<li>Execute the <code>stoch_simul</code> block for impulse response simulation</li>
+<li>Store all output and diagnostics in the <code>context</code> variable</li>
+</ul>
 
 
 
