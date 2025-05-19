@@ -341,6 +341,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#download-the-model-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      £ 📥 Download the Model File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-the-model-in-julia" class="md-nav__link">
     <span class="md-ellipsis">
       ▶️ Running the Model in Julia
@@ -481,6 +490,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#download-the-model-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      £ 📥 Download the Model File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#running-the-model-in-julia" class="md-nav__link">
     <span class="md-ellipsis">
       ▶️ Running the Model in Julia
@@ -505,10 +523,14 @@
 
 
 
-<h1 id="simple-model">🧪 Simple Model</h1>
+<h1 id="simple-model">Simple Model</h1>
 <p>This page demonstrates how to run a basic macroeconomic model in DynareJulia using a <code>.mod</code> file and the <code>@dynare</code> macro.</p>
 <hr />
 <h2 id="dynare-model-file-simplemod">📄 Dynare Model File (<code>simple.mod</code>)</h2>
+<h2 id="download-the-model-file">£ 📥 Download the Model File</h2>
+<ul>
+<li><a href="models/simple.mod">Download <code>simple.mod</code></a></li>
+</ul>
 <pre><code class="language-mod">var PIE, R, Y;
 
 varexo eps_Y;
@@ -537,10 +559,10 @@ stoch_simul(order = 1, irf = 25);
 </ul>
 <h2 id="running-the-model-in-julia">▶️ Running the Model in Julia</h2>
 <p>Once you have <code>Dynare.jl</code> installed, you can run the model using the <code>@dynare</code> macro. This macro handles the entire process of parsing, solving, and simulating the model.</p>
-<p>Create a Julia script named <code>run_simple.jl</code> and include the following code:</p>
+<p>In the terminal run:</p>
 <pre><code class="language-julia">using Dynare
 
-context = @dynare &quot;models/simple.mod&quot;;
+context = @dynare &quot;simple.mod&quot;;
 </code></pre>
 <p><strong>This will:</strong></p>
 <ul>
