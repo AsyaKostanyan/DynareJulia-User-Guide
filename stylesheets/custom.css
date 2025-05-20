@@ -2,5 +2,22 @@
   background-color: #f6f8fa;
   border: 1px solid #d0d7de;
   border-radius: 6px;
-  padding: 0.7em 1em;
+  padding: 1em;
+  margin: 1em 0;
+  box-shadow: none;
+}
+
+.md-typeset details.plain summary {
+  font-weight: 600;
+  cursor: pointer;
+  padding-bottom: 0.3em;
+  color: #24292f;
+}
+
+.md-typeset details.plain[open] summary {
+  margin-bottom: 0.5em;
+}
+
+.md-typeset details.plain > *:last-child {
+  margin-bottom: 0;
 }
