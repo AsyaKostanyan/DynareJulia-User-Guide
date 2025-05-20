@@ -110,22 +110,22 @@ The following academic and policy-oriented references are essential to understan
 
 - **Clinton, K., Hlédik, T., Holub, T., Laxton, D., & Wang, H. (2017)**  
   *Czech Magic: Implementing Inflation-Forecast Targeting at the CNB*  
-  IMF Working Paper 17/21.  
+  IMF Working Paper 17/21.
   [Download here](https://www.imf.org/en/Publications/WP/Issues/2017/01/20/Czech-Magic-Implementing-Inflation-Forecast-Targeting-at-the-CNB-44604)
 
 - **Laxton, D., Freedman, C., Kumhof, M., Laxton, J., Muir, D., Mursula, S., & Wang, H. (2015)**  
   *Adding the Exchange Rate as a Tool to Combat Deflationary Risks in the Czech Republic*  
-  IMF Working Paper 15/74.  
+  IMF Working Paper 15/74.
   [Download here](https://www.imf.org/en/Publications/WP/Issues/2016/12/31/Adding-the-Exchange-Rate-as-a-Tool-to-Combat-Deflationary-Risks-in-the-Czech-Republic-42771)
 
 - **Greenspan, A. (2003)**  
   *Monetary Policy under Uncertainty*  
-  Jackson Hole Symposium Speech.
+  Jackson Hole Symposium Speech. 
   [Download here](https://www.federalreserve.gov/boarddocs/speeches/2003/20030829/default.htm)
 
 - **Bernanke, B. (2024)**  
   *Forecasting for Monetary Policy Making and Communication: A Review*  
-  Bank of England.
+  Bank of England. 
   [Download here](https://www.bankofengland.co.uk/independent-evaluation-office/forecasting-for-monetary-policy-making-and-communication-at-the-bank-of-england-a-review)
 
 ---
@@ -133,3 +133,103 @@ The following academic and policy-oriented references are essential to understan
 **Further Reading & Transparency Reports**  
 - [The Better Policy Project – Research Papers](https://www.thebetterpolicyproject.org/research-papers)  
 - [Central Bank of Armenia – Transparency Report Q4 2024](https://www.cba.am/EN/pmessagesannouncements/Transparency_Report_Q42024_Eng.pdf)
+
+
+## Video Tutorials
+
+Check out ENDOCRED framework in action through a full video lecture series and real-world applications.
+
+<style>
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.video-grid .video {
+  flex: 1 1 calc(50% - 20px);
+  box-sizing: border-box;
+}
+.video-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.video-grid h4 {
+  margin: 10px 0 5px;
+}
+</style>
+
+<div class="video-grid">
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=dA45w1VwkVk" target="_blank">
+    <img src="https://img.youtube.com/vi/dA45w1VwkVk/hqdefault.jpg" alt="The Endogenous Policy Credibility Model">
+  </a>
+  <h4>The Endogenous Policy Credibility Model</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=0Q_XUtJMMoM" target="_blank">
+    <img src="https://img.youtube.com/vi/0Q_XUtJMMoM/hqdefault.jpg" alt="Real-World Applications of ENDOCRED">
+  </a>
+  <h4>Real-World Applications of ENDOCRED</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=MCWz0ABu_Z0" target="_blank">
+    <img src="https://img.youtube.com/vi/MCWz0ABu_Z0/hqdefault.jpg" alt="Abstract">
+  </a>
+  <h4>ENDOCRED - Abstract</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=vyG-wxkkhzA" target="_blank">
+    <img src="https://img.youtube.com/vi/vyG-wxkkhzA/hqdefault.jpg" alt="Introduction">
+  </a>
+  <h4>1. Introduction</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=rmi8G5gJgcU" target="_blank">
+    <img src="https://img.youtube.com/vi/rmi8G5gJgcU/hqdefault.jpg" alt="Development of Credibility-Focused Models">
+  </a>
+  <h4>2. Development of Credibility-Focused Models</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=UHr-JwT5NLE" target="_blank">
+    <img src="https://img.youtube.com/vi/UHr-JwT5NLE/hqdefault.jpg" alt="Multi-Country Gap Model">
+  </a>
+  <h4>3. The Multi-Country Gap Model</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=6a96GlKfjI0" target="_blank">
+    <img src="https://img.youtube.com/vi/6a96GlKfjI0/hqdefault.jpg" alt="Non-linear ENDOCRED">
+  </a>
+  <h4>4. Non-linear ENDOCRED</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=DBGw12gKOwA" target="_blank">
+    <img src="https://img.youtube.com/vi/DBGw12gKOwA/hqdefault.jpg" alt="Future of Monetary Policy Frameworks">
+  </a>
+  <h4>5. The Future of Monetary Policy Frameworks</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=s4DaZzjYdrM" target="_blank">
+    <img src="https://img.youtube.com/vi/s4DaZzjYdrM/hqdefault.jpg" alt="FPAS MARK II and ENDOCRED">
+  </a>
+  <h4>6. FPAS MARK II and ENDOCRED</h4>
+</div>
+
+<div class="video">
+  <a href="https://www.youtube.com/watch?v=tMxe1iAepks" target="_blank">
+    <img src="https://img.youtube.com/vi/tMxe1iAepks/hqdefault.jpg" alt="ENDOCRED Handbook - Conclusion">
+  </a>
+  <h4>ENDOCRED Handbook – Conclusion</h4>
+</div>
+
+</div>
+
