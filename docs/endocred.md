@@ -103,6 +103,18 @@ The following academic and policy-oriented references are essential to understan
   International Monetary Fund.
   [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_8de64ff0b60b4b5b84ce827b82627fe8.pdf)
 
+  - **Kostanyan, A., Matinyan, A., Papikyan, A. (2022)**  
+  *Getting FIT with Imperfect Policy Credibility 
+  DYNARE/JULIA Workshops with an Application for the US  Economy (2022)*
+  Central Bank of Armenia.
+  [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_9c8ffebeb3fd4a4089dd58df49912efc.pdf)
+
+  - **Kostanyan, A., Matinyan, A., Papikyan, A. (2022)**  
+  *Getting FIT with Imperfect Policy Credibility:
+  DYNARE/JULIA Workshops with an Application for a Small Open Economy*
+  Central Bank of Armenia.
+  [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_8367dd41c9bf4293af461464187ad2a1.pdf)
+
 - **Laxton, D., Igityan, H., & Mkhatrishvili, S. (2024)**  
   *Adapting Monetary Policy Frameworks for Risk Management*  
   Forthcoming in the **Oxford Review of Economic Policy**.
@@ -135,7 +147,7 @@ The following academic and policy-oriented references are essential to understan
 - [Central Bank of Armenia – Transparency Report Q4 2024](https://www.cba.am/EN/pmessagesannouncements/Transparency_Report_Q42024_Eng.pdf)
 
 
-## Video Tutorials
+## 🎥 Video Tutorials
 
 Check out ENDOCRED framework in action through a full video lecture series and real-world applications.
 
