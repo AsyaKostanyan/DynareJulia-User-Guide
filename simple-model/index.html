@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../video-tutorials/">
+        <link rel="prev" href="../installation/">
       
       
         <link rel="next" href="../endocred/">
@@ -257,28 +257,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../video-tutorials/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Video Tutorials
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -439,6 +417,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../video-tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Video Tutorials
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../faq/" class="md-nav__link">
         
   
@@ -529,7 +529,7 @@
 <h2 id="dynare-model-file-simplemod">📄 Dynare Model File (<code>simple.mod</code>)</h2>
 <h2 id="download-the-model-file">Download the Model File</h2>
 <p><a href="../models/simple.mod">Download <code>simple.mod</code></a></p>
-<pre><code class="language-mod">var PIE, R, Y;
+<div class="highlight"><pre><span></span><code>var PIE, R, Y;
 
 varexo eps_Y;
 
@@ -546,8 +546,7 @@ end;
 check;
 
 stoch_simul(order = 1, irf = 25);
-
-</code></pre>
+</code></pre></div>
 <p><strong>Description:</strong></p>
 <ul>
 <li><code>PIE</code>, <code>R</code>, and <code>Y</code> are endogenous variables.</li>
@@ -558,10 +557,10 @@ stoch_simul(order = 1, irf = 25);
 <h2 id="running-the-model-in-julia">▶️ Running the Model in Julia</h2>
 <p>Once you have <code>Dynare.jl</code> installed, you can run the model using the <code>@dynare</code> macro. This macro handles the entire process of parsing, solving, and simulating the model.</p>
 <p>In the terminal run:</p>
-<pre><code class="language-julia">using Dynare
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">Dynare</span>
 
-context = @dynare &quot;simple.mod&quot;;
-</code></pre>
+<span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nd">@dynare</span><span class="w"> </span><span class="s">&quot;simple.mod&quot;</span><span class="p">;</span>
+</code></pre></div>
 <p><strong>This will:</strong></p>
 <ul>
 <li>Load and solve the model defined in <code>simple.mod</code></li>

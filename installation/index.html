@@ -12,7 +12,7 @@
         <link rel="prev" href="../getting-started/">
       
       
-        <link rel="next" href="../video-tutorials/">
+        <link rel="next" href="../simple-model/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -518,28 +518,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../video-tutorials/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Video Tutorials
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../simple-model/" class="md-nav__link">
         
   
@@ -612,6 +590,28 @@
   
   <span class="md-ellipsis">
     Potential Errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video-tutorials/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Video Tutorials
     
   </span>
   
@@ -924,8 +924,8 @@ activate venv</p>
 <p>There are two ways to launch the Julia REPL:</p>
 <h4 id="option-a-from-your-system-terminal">Option A: From your system terminal</h4>
 <p>Simply type:</p>
-<pre><code class="language-bash">julia
-</code></pre>
+<div class="highlight"><pre><span></span><code>julia
+</code></pre></div>
 <h4 id="option-b-from-inside-visual-studio-code">Option B: From inside Visual Studio Code</h4>
 <ol>
 <li>Press <code>Ctrl + Shift + P</code> (or <code>Cmd + Shift + P</code> on macOS)</li>
@@ -936,25 +936,25 @@ VS Code will open a terminal panel with the Julia REPL running.</li>
 <hr />
 <h3 id="22-add-the-dynarejl-package">2.2 Add the Dynare.jl package</h3>
 <p>Once the REPL is open, enter the following commands:</p>
-<pre><code class="language-bash">using Pkg
-Pkg.add(&quot;Dynare&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code>using<span class="w"> </span>Pkg
+Pkg.add<span class="o">(</span><span class="s2">&quot;Dynare&quot;</span><span class="o">)</span>
+</code></pre></div>
 <h3 id="23-first-time-use">2.3 First-Time Use</h3>
 <p>After installing Dynare.jl, test that the package loads correctly.</p>
 <p>In the Julia REPL, type:</p>
-<pre><code class="language-bash">using Dynare
-</code></pre>
+<div class="highlight"><pre><span></span><code>using<span class="w"> </span>Dynare
+</code></pre></div>
 <p>Note: The first time you use the package, Julia will precompile it. This may take a minute.</p>
 <p><strong>Recommendation:</strong> After installing packages, it is good practice to restart your Julia REPL or VS Code terminal.<br />
 This ensures that all changes take effect properly, especially when adding new packages or changing environments.</p>
 <hr />
 <h3 id="24-optional-check-the-installed-version">2.4 Optional: Check the Installed Version</h3>
 <p>To verify which version of Dynare was installed, run:</p>
-<pre><code class="language-bash">Pkg.status(&quot;Dynare&quot;)
-</code></pre>
+<div class="highlight"><pre><span></span><code>Pkg.status<span class="o">(</span><span class="s2">&quot;Dynare&quot;</span><span class="o">)</span>
+</code></pre></div>
 <p>You should see an output like:</p>
-<pre><code class="language-bash">Dynare v0.9.18
-</code></pre>
+<div class="highlight"><pre><span></span><code>Dynare<span class="w"> </span>v0.9.18
+</code></pre></div>
 <p>This confirms the package is installed and active in your Julia environment.</p>
 <h3 id="25-install-required-julia-packages-for-modeling">2.5 Install Required Julia Packages for Modeling</h3>
 <p>In addition to <code>Dynare</code>, you will need several additional Julia packages for typical modeling workflows:</p>
@@ -967,22 +967,22 @@ This ensures that all changes take effect properly, especially when adding new p
 <hr />
 <h4 id="step-1-launch-julia">Step 1: Launch Julia</h4>
 <p>In your terminal, start Julia by typing:</p>
-<pre><code class="language-bash">julia
-</code></pre>
+<div class="highlight"><pre><span></span><code>julia
+</code></pre></div>
 <h4 id="step-2-install-the-required-packages">Step 2: Install the required packages</h4>
-<p>Once the Julia REPL opens, run the following commands:</p>
-<pre><code class="language-bash">using Pkg
-Pkg.add([
-    &quot;PATHSolver&quot;,
-    &quot;DataFrames&quot;,
-    &quot;Dates&quot;,
-    &quot;Plots&quot;
-])
-</code></pre>
+<p>Once the Julia REPL opens, run the following commands:
+<div class="highlight"><pre><span></span><code>using<span class="w"> </span>Pkg
+Pkg.add<span class="o">([</span>
+<span class="w">    </span><span class="s2">&quot;PATHSolver&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;DataFrames&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;Dates&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;Plots&quot;</span>
+<span class="o">])</span>
+</code></pre></div></p>
 <h4 id="step-3-test-the-installation">Step 3: Test the installation</h4>
-<p>To verify that everything is working, enter:</p>
-<pre><code class="language-bash">using PATHSolver, DataFrames, Dates, Plots
-</code></pre>
+<p>To verify that everything is working, enter:
+<div class="highlight"><pre><span></span><code>using<span class="w"> </span>PATHSolver,<span class="w"> </span>DataFrames,<span class="w"> </span>Dates,<span class="w"> </span>Plots
+</code></pre></div></p>
 <h3 id="26-configure-the-path-license">2.6 Configure the PATH License</h3>
 <p>Dynare uses the <a href="https://pages.cs.wisc.edu/~ferris/path.html">PATH solver</a> by S. Dirkse, M.C. Ferris, and T. Munson — as accessed through <code>PATHSolver.jl</code> — to solve perfect foresight models with occasionally binding constraints.</p>
 <p>To use it, you need to register the free license key in your Julia startup file.</p>
@@ -994,8 +994,8 @@ Pkg.add([
 setenv PATH_LICENSE_STRING "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0"</p>
 <h4 id="2-add-the-license-to-your-startupjl-file">2. Add the license to your <code>startup.jl</code> file</h4>
 <p>Create a file named <code>startup.jl</code> and add the following line:</p>
-<pre><code class="language-julia">ENV[&quot;PATH_LICENSE_STRING&quot;] = &quot;2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">ENV</span><span class="p">[</span><span class="s">&quot;PATH_LICENSE_STRING&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0&quot;</span>
+</code></pre></div>
 <h3 id="instructions-by-platform">Instructions by Platform</h3>
 <hr />
 <h4 id="windows-file-explorer-method">💻 Windows (File Explorer method)</h4>
@@ -1006,8 +1006,8 @@ setenv PATH_LICENSE_STRING "2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&
 <li>Right-click → <strong>New</strong> → <strong>Text Document</strong></li>
 <li>Open the new file and paste the following line:</li>
 </ol>
-<pre><code class="language-julia">ENV[&quot;PATH_LICENSE_STRING&quot;] = &quot;2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0&quot;
-</code></pre>
+<div class="highlight"><pre><span></span><code><span class="nb">ENV</span><span class="p">[</span><span class="s">&quot;PATH_LICENSE_STRING&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;2830898829&amp;Courtesy&amp;&amp;&amp;USR&amp;45321&amp;5_1_2021&amp;1000&amp;PATH&amp;GEN&amp;31_12_2025&amp;0_0_0&amp;6000&amp;0_0&quot;</span>
+</code></pre></div>
 <ol>
 <li>Save the file:</li>
 <li>Go to <strong>File → Save As</strong></li>
