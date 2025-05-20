@@ -3,6 +3,7 @@
 ---
 
 ??? question "Who should I contact for questions, collaboration, or training?"
+    :class: plain
 
     For any questions about using DynareJulia, contributing to the project, or organizing training sessions and workshops, please contact:  
     **Asya Kostanyan** – [asyakostanyan@thebetterpolicyproject.org](mailto:asyakostanyan@thebetterpolicyproject.org)
@@ -10,6 +11,7 @@
 ---
 
 ??? question "Is training available for DynareJulia?"
+    :class: plain
 
     Yes! We offer **ongoing training opportunities** through The Better Policy Project, including:
 
@@ -22,6 +24,7 @@
 ---
 
 ??? question "What is DynareJulia?"
+    :class: plain
 
     DynareJulia is an open-source modeling engine written in Julia that builds on the well-established **Dynare for MATLAB/Octave** framework.  
     It supports solving, simulating, and analyzing macroeconomic models written in `.mod` files — including support for perfect foresight, stochastic simulations, and modular frameworks like **ENDOCRED**.
@@ -29,6 +32,7 @@
 ---
 
 ??? question "How is this different from Dynare (MATLAB version)?"
+    :class: plain
 
     DynareJulia reimplements many of the core features of Dynare in **pure Julia**, which offers:
 
@@ -42,6 +46,7 @@
 ---
 
 ??? question "Is this only for advanced users?"
+    :class: plain
 
     No! DynareJulia is designed for both:
 
@@ -53,6 +58,7 @@
 ---
 
 ??? question "Is DynareJulia free?"
+    :class: plain
 
     Yes. DynareJulia is **100% free and open source** — and it will remain that way.  
     You can use it, modify it, and redistribute it under its permissive license.
@@ -60,6 +66,7 @@
 ---
 
 ??? question "What is PythonDynareJulia?"
+    :class: plain
 
     **PythonDynareJulia** is a new project under development that provides a **Python-based frontend for DynareJulia**.
 
@@ -79,6 +86,7 @@
 ---
 
 ??? question "What features are currently supported?"
+    :class: plain
 
     - Solving DSGE and perfect foresight models  
     - `@dynare` macro and `Dynare.run_model()` interface  
@@ -89,12 +97,14 @@
 ---
 
 ??? question "Is this a final release?"
+    :class: plain
 
     Not yet. DynareJulia is actively under development.
 
 ---
 
 ??? question "Can I contribute?"
+    :class: plain
 
     Yes, contributors are welcome! You can:
 
@@ -105,6 +115,7 @@
 ---
 
 ??? question "Where can I learn more?"
+    :class: plain
 
     Explore:
 
