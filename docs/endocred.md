@@ -96,14 +96,17 @@ The following academic and policy-oriented references are essential to understan
 - **Laxton, D., Galstyan, M., & Avagyan, V. (2024)**  
   *Prudent Risk Management Approach to Monetary Policy*  
   Central Bank of Armenia, forthcoming.
+  [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_44316592afd24e26add8648beeb507a2.pdf)
 
 - **Adrian, T., Laxton, D., & Obstfeld, M. (Eds.) (2018)**  
   *Frontiers of Monetary Policy Making*  
   International Monetary Fund.
+  [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_8de64ff0b60b4b5b84ce827b82627fe8.pdf)
 
 - **Laxton, D., Igityan, H., & Mkhatrishvili, S. (2024)**  
   *Adapting Monetary Policy Frameworks for Risk Management*  
   Forthcoming in the **Oxford Review of Economic Policy**.
+  [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_de842ff248ea4351b5c31b172e3fca22.pdf)
 
 - **Clinton, K., Hlédik, T., Holub, T., Laxton, D., & Wang, H. (2017)**  
   *Czech Magic: Implementing Inflation-Forecast Targeting at the CNB*  
@@ -118,10 +121,12 @@ The following academic and policy-oriented references are essential to understan
 - **Greenspan, A. (2003)**  
   *Monetary Policy under Uncertainty*  
   Jackson Hole Symposium Speech.
+  [Download here](https://www.federalreserve.gov/boarddocs/speeches/2003/20030829/default.htm)
 
 - **Bernanke, B. (2024)**  
   *Forecasting for Monetary Policy Making and Communication: A Review*  
   Bank of England.
+  [Download here](https://www.bankofengland.co.uk/independent-evaluation-office/forecasting-for-monetary-policy-making-and-communication-at-the-bank-of-england-a-review)
 
 ---
 
