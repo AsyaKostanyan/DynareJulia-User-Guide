@@ -103,13 +103,13 @@ The following academic and policy-oriented references are essential to understan
   International Monetary Fund.
   [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_8de64ff0b60b4b5b84ce827b82627fe8.pdf)
 
-  - **Kostanyan, A., Matinyan, A., Papikyan, A. (2022)**  
+  - **Kostanyan, A., Matinyan, A., & Papikyan, A. (2022)**  
   *Getting FIT with Imperfect Policy Credibility 
   DYNARE/JULIA Workshops with an Application for the US  Economy (2022)*
   Central Bank of Armenia.
   [Download here](https://www.thebetterpolicyproject.org/_files/ugd/bf672a_9c8ffebeb3fd4a4089dd58df49912efc.pdf)
 
-  - **Kostanyan, A., Matinyan, A., Papikyan, A. (2022)**  
+  - **Kostanyan, A., Matinyan, A., & Papikyan, A. (2022)**  
   *Getting FIT with Imperfect Policy Credibility:
   DYNARE/JULIA Workshops with an Application for a Small Open Economy*
   Central Bank of Armenia.
