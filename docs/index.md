@@ -5,6 +5,15 @@ This guide is designed to help users get started, understand the workflow, and f
 
 ---
 
+## Acknowledgment
+
+A huge thank you to **Michel Juillard** for his incredible work spanning more than two decades on the development of **Dynare**, and more recently, for his pioneering efforts on **DynareJulia**.
+
+His contributions — from code and methodology to trainings and mentorship — have been instrumental in making these tools accessible to researchers and policymakers worldwide.  
+His continuous support, generosity, and vision are deeply appreciated by the entire community.
+
+---
+
 ## What is DynareJulia?
 
 **DynareJulia** is a high-performance, modern, and flexible framework for solving, simulating, and analyzing dynamic economic models — written in **Julia**, and inspired by the powerful features of Dynare and the computational speed of Julia.
