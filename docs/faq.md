@@ -2,133 +2,151 @@
 
 ---
 
-??? question "Who should I contact for questions, collaboration, or training?"
-    :class: plain
+<details>
+<summary><strong>Who should I contact for questions, collaboration, or training?</strong></summary>
 
-    For any questions about using DynareJulia, contributing to the project, or organizing training sessions and workshops, please contact:  
-    **Asya Kostanyan** – [asyakostanyan@thebetterpolicyproject.org](mailto:asyakostanyan@thebetterpolicyproject.org)
+For any questions about using DynareJulia, contributing to the project, or organizing training sessions and workshops, please contact:  
+<b>Asya Kostanyan</b> – <a href="mailto:asyakostanyan@thebetterpolicyproject.org">asyakostanyan@thebetterpolicyproject.org</a>
 
----
-
-??? question "Is training available for DynareJulia?"
-    :class: plain
-
-    Yes! We offer **ongoing training opportunities** through The Better Policy Project, including:
-
-    - Introductory courses on DynareJulia and macroeconomic modeling  
-    - Hands-on workshops on scenario analysis, ENDOCRED and DSGE models  
-    - Custom trainings for central banks and research teams
-
-    To request training or schedule a session, contact [asyakostanyan@thebetterpolicyproject.org](mailto:asyakostanyan@thebetterpolicyproject.org)
+</details>
 
 ---
 
-??? question "What is DynareJulia?"
-    :class: plain
+<details>
+<summary><strong>Is training available for DynareJulia?</strong></summary>
 
-    DynareJulia is an open-source modeling engine written in Julia that builds on the well-established **Dynare for MATLAB/Octave** framework.  
-    It supports solving, simulating, and analyzing macroeconomic models written in `.mod` files — including support for perfect foresight, stochastic simulations, and modular frameworks like **ENDOCRED**.
+Yes! We offer <strong>ongoing training opportunities</strong> through The Better Policy Project, including:
 
----
+- Introductory courses on DynareJulia and macroeconomic modeling  
+- Hands-on workshops on scenario analysis, ENDOCRED, and DSGE models  
+- Custom trainings for central banks and research teams
 
-??? question "How is this different from Dynare (MATLAB version)?"
-    :class: plain
+To schedule a session, contact <a href="mailto:asyakostanyan@thebetterpolicyproject.org">asyakostanyan@thebetterpolicyproject.org</a>.
 
-    DynareJulia reimplements many of the core features of Dynare in **pure Julia**, which offers:
-
-    - Faster performance on large simulations  
-    - Better modularity and flexibility  
-    - Full integration with the Julia package ecosystem (e.g., `Plots.jl`, `DataFrames.jl`)  
-    - No need for MATLAB licenses or proprietary software
-
-    However, some advanced Dynare (MATLAB) features are still under development.
+</details>
 
 ---
 
-??? question "Is this only for advanced users?"
-    :class: plain
+<details>
+<summary><strong>What is DynareJulia?</strong></summary>
 
-    No! DynareJulia is designed for both:
+DynareJulia is an open-source modeling engine written in Julia that builds on the well-established <strong>Dynare for MATLAB/Octave</strong> framework.  
+It supports solving, simulating, and analyzing macroeconomic models written in <code>.mod</code> files — including support for perfect foresight, stochastic simulations, and modular frameworks like <strong>ENDOCRED</strong>.
 
-    - **Beginner users** learning DSGE modeling through `.mod` files and visual outputs  
-    - **Advanced users** developing modular, nonlinear, or multi-country models
-
-    If you’re familiar with Dynare in MATLAB or FPAS-style modeling, you can switch to DynareJulia easily.
+</details>
 
 ---
 
-??? question "Is DynareJulia free?"
-    :class: plain
+<details>
+<summary><strong>How is this different from Dynare (MATLAB version)?</strong></summary>
 
-    Yes. DynareJulia is **100% free and open source** — and it will remain that way.  
-    You can use it, modify it, and redistribute it under its permissive license.
+DynareJulia reimplements many of the core features of Dynare in <strong>pure Julia</strong>, which offers:
 
----
+- Faster performance  
+- Better modularity and flexibility  
+- Full integration with Julia packages like <code>Plots.jl</code> and <code>DataFrames.jl</code>  
+- No need for MATLAB licenses
 
-??? question "What is PythonDynareJulia?"
-    :class: plain
+Some advanced Dynare features are still being implemented.
 
-    **PythonDynareJulia** is a new project under development that provides a **Python-based frontend for DynareJulia**.
-
-    Its goals are to:
-
-    - Make DynareJulia more accessible to economists familiar with Python  
-    - Offer a GUI-like interface for loading, solving, and simulating `.mod` files  
-    - Integrate `Dynare.jl` as the computational backend while using Python for:  
-      - Input/output  
-      - Visualization (`matplotlib`, `seaborn`)  
-      - Notebook-based interaction (e.g., Jupyter)
-
-    This allows users to benefit from Julia's performance **without leaving their Python workflow**.
-
-    > The PythonDynareJulia interface will be fully free and open source. More details coming soon!
+</details>
 
 ---
 
-??? question "What features are currently supported?"
-    :class: plain
+<details>
+<summary><strong>Is this only for advanced users?</strong></summary>
 
-    - Solving DSGE and perfect foresight models  
-    - `@dynare` macro and `Dynare.run_model()` interface  
-    - Visualizing IRFs with `Plots.jl`  
-    - Multiple-model comparison  
-    - Integration with custom Julia scripts
+No! DynareJulia is suitable for:
 
----
+- Beginners learning DSGE modeling  
+- Central banks using FPAS frameworks  
+- Advanced researchers working with nonlinear, modular, or multi-country models
 
-??? question "Is this a final release?"
-    :class: plain
-
-    Not yet. DynareJulia is actively under development.
+</details>
 
 ---
 
-??? question "Can I contribute?"
-    :class: plain
+<details>
+<summary><strong>Is DynareJulia free?</strong></summary>
 
-    Yes, contributors are welcome! You can:
+Yes. DynareJulia is <strong>100% free and open source</strong> — and it will remain that way.  
+You can use it, modify it, and redistribute it under a permissive license.
 
-    - Submit feedback via email  
-    - Share your own `.mod` and `.jl` examples  
-    - Help write docs or tutorials
-
----
-
-??? question "Where can I learn more?"
-    :class: plain
-
-    Explore:
-
-    - [Video Tutorials](video-tutorials.md)  
-    - [Simple Model Walkthrough](simple-model.md)  
-    - [ENDOCRED Use Case](endocred.md)  
-    - [Official Research](https://www.thebetterpolicyproject.org/research-papers)
-
-    Also see the official DynareJulia repositories:
-
-    - [DynareJulia GitHub repository](https://github.com/DynareJulia/Dynare.jl)  
-    - [DynareJulia Documentation](https://dynarejulia.github.io/Dynare.jl/dev/)
+</details>
 
 ---
 
-For anything else, reach out to [asyakostanyan@thebetterpolicyproject.org](mailto:asyakostanyan@thebetterpolicyproject.org)
+<details>
+<summary><strong>What is PythonDynareJulia?</strong></summary>
+
+<strong>PythonDynareJulia</strong> is an upcoming project under development that provides a Python-based frontend for DynareJulia.
+
+It will allow users to:
+
+- Run and simulate <code>.mod</code> files directly from Python  
+- Use Jupyter notebooks or GUI-like interfaces  
+- Visualize results using Python libraries like <code>matplotlib</code> or <code>pandas</code>
+
+More details coming soon.
+
+</details>
+
+---
+
+<details>
+<summary><strong>What features are currently supported?</strong></summary>
+
+- Solving DSGE and perfect foresight models  
+- Using the <code>@dynare</code> macro or <code>Dynare.run_model()</code>  
+- Visualizing impulse response functions  
+- Running multiple model scenarios  
+- Integrating with Julia scripting for advanced workflows
+
+</details>
+
+---
+
+<details>
+<summary><strong>Is this a final release?</strong></summary>
+
+No. DynareJulia is actively under development.  
+New features like estimation, nonlinear solvers, and advanced diagnostics are in progress.
+
+</details>
+
+---
+
+<details>
+<summary><strong>Can I contribute?</strong></summary>
+
+Yes! We welcome contributions:
+
+- Share your models and use cases  
+- Improve documentation and tutorials  
+- Report issues or suggest features on GitHub  
+- Help expand functionality
+
+</details>
+
+---
+
+<details>
+<summary><strong>Where can I learn more?</strong></summary>
+
+Explore these pages:
+
+- <a href="video-tutorials.md">Video Tutorials</a>  
+- <a href="simple-model.md">Simple Model Walkthrough</a>  
+- <a href="endocred.md">ENDOCRED Use Case</a>  
+- <a href="https://www.thebetterpolicyproject.org/research-papers" target="_blank">Research Papers</a>
+
+Also check out:
+
+- <a href="https://github.com/DynareJulia/Dynare.jl" target="_blank">DynareJulia GitHub Repository</a>  
+- <a href="https://dynarejulia.github.io/Dynare.jl/dev/" target="_blank">DynareJulia Documentation</a>
+
+</details>
+
+---
+
+For anything else, reach out to <a href="mailto:asyakostanyan@thebetterpolicyproject.org">asyakostanyan@thebetterpolicyproject.org</a>
