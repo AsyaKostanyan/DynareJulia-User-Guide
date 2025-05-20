@@ -354,18 +354,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#included-files" class="md-nav__link">
+  <a href="#brief-introduction-to-endocred" class="md-nav__link">
     <span class="md-ellipsis">
-      Included Files
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      ▶️ How to Run
+      Brief Introduction to ENDOCRED
     </span>
   </a>
   
@@ -472,18 +463,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#included-files" class="md-nav__link">
+  <a href="#brief-introduction-to-endocred" class="md-nav__link">
     <span class="md-ellipsis">
-      Included Files
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-to-run" class="md-nav__link">
-    <span class="md-ellipsis">
-      ▶️ How to Run
+      Brief Introduction to ENDOCRED
     </span>
   </a>
   
@@ -506,9 +488,63 @@
 
 
 <h1 id="endocred-model-simulations">ENDOCRED Model Simulations</h1>
-<p>This example shows how to run and compare multiple economic scenarios using DynareJulia and visualise results in a 2×2 grid.</p>
+<p>ENDOCRED is a monetary policy model with endogenous policy credibility. It is widely used at central banks around the world, and in particulat, at the central banks that adopted prudent risk-management approach to monetary policy (FPAS MARK II) for forecasting and policy analysis.</p>
 <hr />
-<h2 id="included-files">Included Files</h2>
+<h2 id="brief-introduction-to-endocred">Brief Introduction to ENDOCRED</h2>
+<h1 id="endocred-modeling-credibility-in-monetary-policy">ENDOCRED – Modeling Credibility in Monetary Policy</h1>
+<p>ENDOCRED (Endogenous Credibility) is a macroeconomic modeling framework that explicitly incorporates <strong>credibility dynamics</strong> into monetary policy decisions.</p>
+<hr />
+<h2 id="brief-introduction-to-endocred_1">Brief Introduction to ENDOCRED</h2>
+<p><strong>Why ENDOCRED?</strong></p>
+<ul>
+<li>Traditional FPAS models assume <strong>fixed policy credibility</strong>, often unrealistic during uncertain periods.</li>
+<li>ENDOCRED addresses this by allowing <strong>public trust in the central bank to evolve endogenously</strong> over time.</li>
+<li>It is especially relevant in contexts like <strong>post-pandemic inflation</strong>, where expectations, communication, and policy strength interact nonlinearly.</li>
+</ul>
+<hr />
+<h2 id="key-features-of-the-endocred-framework">Key Features of the ENDOCRED Framework</h2>
+<ul>
+<li><strong>Endogenous Credibility Process</strong>: Expectations react dynamically to how well the central bank achieves its objectives.</li>
+<li><strong>Two Inflation Regimes</strong>:</li>
+<li>A credible regime (expectations anchored at 2%)</li>
+<li>A high-inflation regime (persistent, drifting expectations)</li>
+<li><strong>Nonlinear Phillips Curve</strong>: The effect of output gaps on inflation intensifies in high-pressure economies.</li>
+<li><strong>Loss Function Approach</strong>: The model minimizes a central bank’s loss function instead of assuming a fixed interest rate rule.</li>
+<li><strong>DynareJulia Implementation</strong>: Fully implemented in open-source tools for fast policy simulation and transparency.</li>
+</ul>
+<hr />
+<h2 id="policy-simulations-and-scenarios">Policy Simulations and Scenarios</h2>
+<p>The model supports scenario-based decision-making using cases such as:</p>
+<ul>
+<li><strong>Case A (Hawkish)</strong>: Persistent inflation, requires strong policy tightening.</li>
+<li><strong>Case B (Dovish)</strong>: Inflation is transitory, calls for mild adjustment.</li>
+<li><strong>Case X (Tail Risk)</strong>: Stagflation or geopolitical shocks.</li>
+</ul>
+<h3 id="alternative-paths-for-the-policy-rate">Alternative Paths for the Policy Rate</h3>
+<p><img alt="Scenario Simulation Output" src="../images/scenarios.png" /></p>
+<hr />
+<h2 id="credibility-metrics">Credibility Metrics</h2>
+<p>The framework introduces two empirical indicators:</p>
+<ul>
+<li><strong>CBSPII</strong>: Central Bank Sticky Price Inflation Indicator (e.g., based on Atlanta Fed sticky CPI)</li>
+<li><strong>CBCSI</strong>: Central Bank Credibility Stock Index</li>
+</ul>
+<p>These help calibrate credibility loss and track its macroeconomic effects.</p>
+<hr />
+<h2 id="key-takeaways">🔑 Key Takeaways</h2>
+<ul>
+<li><strong>Credibility is a dynamic asset</strong>, not a fixed assumption.</li>
+<li><strong>Delays in tightening</strong> can lead to <strong>self-fulfilling inflation traps</strong>.</li>
+<li>Models must account for <strong>expectation shifts</strong> in response to communication and action.</li>
+<li>ENDOCRED helps to think about and model “dark corners” of monetary policy — such as stagflation, delayed disinflation, or excessive tightening.</li>
+</ul>
+<hr />
+<blockquote>
+<p>📖 <em>"In times of incredible uncertainty... a failure to act quickly, aggressively, and flexibly can lead to a very costly loss of credibility."</em><br />
+— <em>Kostanyan et al., 2022</em></p>
+</blockquote>
+<hr />
+<h2 id="model-codes-in-dynarejulia">Model Codes in DynareJulia</h2>
 <p>These are the model and script files:</p>
 <ul>
 <li><a href="../models/MARKET_2025Q1.mod"><code>MARKET_2025Q1.mod</code></a></li>
