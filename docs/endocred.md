@@ -69,7 +69,7 @@ These help calibrate credibility loss and track its macroeconomic effects.
 
 These are the model and script files:
 
-- [`simple_linear.mod`](simple_linear.mod)
+- [`simple_linear.mod`](models/simple_linear.mod)
 - [`simple_linear.jl`](models/simple_linear.jl)
 
 
