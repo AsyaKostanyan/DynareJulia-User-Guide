@@ -65,8 +65,15 @@ These help calibrate credibility loss and track its macroeconomic effects.
 
 ---
 
+## Simple Linear ENDOCRED
 
-## Model Codes in DynareJulia
+These are the model and script files:
+
+- [`simple_linear.mod`](simple_linear.mod)
+- [`simple_linear.jl`](models/simple_linear.jl)
+
+
+## FPAS MARK II Scenarios - Model Codes in DynareJulia 
 
 These are the model and script files:
 
