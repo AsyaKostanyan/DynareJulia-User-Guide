@@ -84,6 +84,10 @@ These are the model and script files:
 
 Download them and place all four in the same project directory.
 
+### Application: Not The Fed Tealbook, April 2025
+
+  [Download here](images/us_report_250519_nttb.pdf)
+
 ---
 
 ## ▶️ How to Run
