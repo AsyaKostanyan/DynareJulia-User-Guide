@@ -15,8 +15,11 @@
         <link rel="next" href="../faq/">
       
       
+        
+      
+      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -24,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -49,7 +52,6 @@
     
       
 
-    
     
     
   </head>
@@ -201,9 +203,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Home
+  
+
     
   </span>
+  
   
 
       </a>
@@ -223,9 +230,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Getting Started
+  
+
     
   </span>
+  
   
 
       </a>
@@ -245,9 +257,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Installation
+  
+
     
   </span>
+  
   
 
       </a>
@@ -267,9 +284,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Video Tutorials
+  
+
     
   </span>
+  
   
 
       </a>
@@ -289,9 +311,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     Simple Model
+  
+
     
   </span>
+  
   
 
       </a>
@@ -311,9 +338,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     ENDOCRED
+  
+
     
   </span>
+  
   
 
       </a>
@@ -333,9 +365,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     GIMF
+  
+
     
   </span>
+  
   
 
       </a>
@@ -359,17 +396,70 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Potential Errors
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
+    
+  
     Potential Errors
+  
+
     
   </span>
   
+  
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-setup-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working setup reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -387,9 +477,14 @@
   
   
   <span class="md-ellipsis">
+    
+  
     FAQ
+  
+
     
   </span>
+  
   
 
       </a>
@@ -417,6 +512,25 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#working-setup-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Working setup reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -425,14 +539,209 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
 
-<h1 id="potential-errors">potential errors</h1>
-<p>This page is under construction.</p>
+<h1 id="potential-errors">Potential Errors</h1>
+<p>Common errors you may run into when setting up DynareJulia on Windows, and how to fix them. Click any error message below to expand the diagnosis and fix.</p>
+<hr />
+<details>
+<summary><strong>UndefVarError: <code>GeneralizedFirstOrderAlgorithm</code> not defined</strong></summary>
+
+**You see something like this when loading Dynare:**
+
+<div class="highlight"><pre><span></span><code>ERROR: LoadError: UndefVarError: `GeneralizedFirstOrderAlgorithm` not defined
+   @ C:\Users\&lt;you&gt;\.julia\packages\Dynare\&lt;hash&gt;\src\global\types.jl:150
+in expression starting at .../Dynare.jl:1
+ERROR: Failed to precompile Dynare ...
+</code></pre></div>
+
+**Why it happens.** Dynare 0.10.0 referenced a symbol (<code>GeneralizedFirstOrderAlgorithm</code>) that the <code>NonlinearSolve</code> package later renamed. If your <code>Manifest.toml</code> pins Dynare 0.10.0 but Pkg resolves the rest of the dependency tree against the newest <code>NonlinearSolve</code>, the symbol is gone and Dynare fails to precompile.
+
+This usually happens when a <code>Manifest.toml</code> was generated against an older Julia version (e.g. 1.9) and is now being used under Julia 1.10 or later.
+
+**Fix.** Wipe the lockfile and let Pkg re-resolve from the <code>Project.toml</code>. This pulls Dynare 0.10.4 (or whatever the latest compatible version is) with a matching set of dependencies.
+
+In a PowerShell terminal at the project root:
+
+<div class="highlight"><pre><span></span><code><span class="c"># 1. Activate the project (sets JULIA_PROJECT to .\venv)</span>
+<span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
+
+<span class="c"># 2. Delete the lockfile</span>
+<span class="nb">Remove-Item</span> <span class="p">.\</span><span class="n">venv</span><span class="p">\</span><span class="n">Manifest</span><span class="p">.</span><span class="n">toml</span>
+
+<span class="c"># 3. Re-resolve and precompile</span>
+<span class="n">julia</span> <span class="n">-e</span> <span class="s2">&quot;using Pkg; Pkg.instantiate(); Pkg.precompile(); Pkg.status()&quot;</span>
+</code></pre></div>
+
+After this finishes, <code>Pkg.status()</code> should report:
+
+<div class="highlight"><pre><span></span><code>[a93c6f00] DataFrames v1.8.2
+[5203de40] Dynare v0.10.4    &lt;-- was 0.10.0 before the fix
+[91a5bcdd] Plots v1.41.6
+[bd369af6] Tables v1.12.1
+</code></pre></div>
+
+If Dynare is still listed as 0.10.0, your <code>Project.toml</code> has a hard pin — remove the <code>[compat]</code> Dynare line and try again.
+
+</details>
+
+<hr />
+<details>
+<summary><strong>cannot remove ... Access is denied [stockflow/model/json]</strong></summary>
+
+**You see this when running a model:**
+
+<div class="highlight"><pre><span></span><code>Starting preprocessing of the model file ...
+terminate called after throwing an instance of &#39;std::filesystem::__cxx11::filesystem_error&#39;
+  what():  filesystem error: cannot remove: Access is denied [stockflow/model/json]
+ERROR: LoadError: type Array has no field results
+</code></pre></div>
+
+**Why it happens.** Two things together:
+
+<ul>
+  <li>The Dynare preprocessor wants to delete the output folder from a previous run before writing fresh output.</li>
+  <li>Dropbox or OneDrive holds file locks on those files while syncing them. The "Access is denied" is the sync client refusing to let go.</li>
+</ul>
+
+When the preprocessor crashes, <code>@dynare</code> returns an empty <code>Vector{Any}</code> instead of a <code>Context</code> — that's why the next line errors with <em>"type Array has no field results"</em>.
+
+**Fix.** Two options, in order of preference:
+
+<strong>Move the project out of Dropbox.</strong> Put your <code>Codes\</code> folder somewhere like <code>C:\dev\thailand2026\</code>. Keep slides and PDFs in Dropbox; keep the code out. DSGE solver output churns hundreds of small files per run, and Dropbox sync hates that.
+
+<strong>Or pause Dropbox before running.</strong> Right-click the Dropbox tray icon → Pause syncing → run your model → resume.
+
+If you control the driver script, you can also add a <code>safe_rm()</code> helper that retries with backoff — it papers over transient locks but not persistent ones.
+
+</details>
+
+<hr />
+<details>
+<summary><strong>Failed to precompile GR_jll / Plots / Dynare</strong></summary>
+
+**You see a cascade of precompile failures:**
+
+<div class="highlight"><pre><span></span><code>Precompiling project...
+  ✗ GR_jll
+  ✗ Qt6ShaderTools_jll
+  ✗ GR
+  ✗ Plots
+  ✗ StatsPlots
+  ✗ Dynare
+  N dependencies errored.
+</code></pre></div>
+
+Notice the cascade: <code>GR_jll</code> is the root failure; everything else fails because it depends on <code>Plots</code> which depends on <code>GR</code>.
+
+**Why it happens.** Almost always Windows long-path limits. The default <code>MAX_PATH</code> is 260 characters. A depot path like:
+
+<div class="highlight"><pre><span></span><code>C:\Users\asyak\Dropbox\Work\The Better Policy Project\Courses\Thailand 2026\DSGE - Week 2\Codes\.julia\artifacts\&lt;40-char-hash&gt;\bin\gr\fonts\...
+</code></pre></div>
+
+is already 165 characters before GR's nested folder structure starts. GR routinely overflows it.
+
+**Fix.** Use a short depot path that lives outside Dropbox.
+
+<ol>
+  <li>Edit <code>activate.ps1</code> to set:</li>
+</ol>
+
+<div class="highlight"><pre><span></span><code><span class="nv">$env:JULIA_DEPOT_PATH</span> <span class="p">=</span> <span class="s2">&quot;C:\jl-depots\thailand2026&quot;</span>
+</code></pre></div>
+
+<ol start="2">
+  <li>Re-activate and re-instantiate:</li>
+</ol>
+
+<div class="highlight"><pre><span></span><code><span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
+<span class="n">julia</span> <span class="n">-e</span> <span class="s2">&quot;using Pkg; Pkg.instantiate(); Pkg.precompile()&quot;</span>
+</code></pre></div>
+
+The <code>Project.toml</code> and <code>Manifest.toml</code> stay in <code>venv\</code> (small text files, fine in Dropbox). Only the multi-GB depot moves to a short path on the system drive.
+
+<strong>Alternative:</strong> enable Windows long-path support globally. Open <code>gpedit.msc</code> → Computer Configuration → Administrative Templates → System → Filesystem → "Enable Win32 long paths" → Enabled. Requires admin and a reboot.
+
+</details>
+
+<hr />
+<details>
+<summary><strong>ArgumentError: invalid index <code>!</code> when extracting IRFs</strong></summary>
+
+**You see one of these when plotting impulse responses:**
+
+<div class="highlight"><pre><span></span><code>ERROR: ArgumentError: invalid index: ! of type typeof(!)
+</code></pre></div>
+
+or:
+
+<div class="highlight"><pre><span></span><code>MethodError: no method matching expand_extrema!(::Plots.Axis,
+  ::AxisArrayTables.AxisArrayTable{Float64, ...})
+</code></pre></div>
+
+**Why it happens.** DynareJulia returns IRFs as <code>AxisArrayTable</code>, <strong>not</strong> <code>DataFrame</code>. DataFrame indexing syntax (<code>tbl[!, :col]</code> or <code>tbl[:, :col]</code>) does not work — <code>!</code> is a function, and <code>:</code> returns a one-column 2D table that <code>Plots</code> can't accept as a y-series.
+
+**Fix.** Use the Tables.jl column accessor and convert to a plain vector:
+
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">Tables</span>
+<span class="n">series</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collect</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span><span class="w"> </span><span class="n">Tables</span><span class="o">.</span><span class="n">getcolumn</span><span class="p">(</span><span class="n">irfs</span><span class="p">[</span><span class="n">shock</span><span class="p">],</span><span class="w"> </span><span class="ss">:b</span><span class="p">))</span>
+</code></pre></div>
+
+This works whether the underlying type is <code>DataFrame</code>, <code>AxisArrayTable</code>, or anything else implementing the Tables.jl interface — so the script stays robust across Dynare versions.
+
+</details>
+
+<hr />
+<details>
+<summary><strong>activate.ps1 : The term '.\activate.ps1' is not recognized</strong></summary>
+
+**You see this in PowerShell:**
+
+<div class="highlight"><pre><span></span><code>activate.ps1 : The term &#39;activate.ps1&#39; is not recognized as the name of a
+cmdlet, function, script file, or operable program.
+</code></pre></div>
+
+**Why it happens.** PowerShell will not run a script in the current folder unless you prefix it with <code>.\</code>. And to keep the environment variables in your shell (rather than throwing them away in a child process), you also need to <em>dot-source</em> the script with a leading <code>.&nbsp;</code> (period + space).
+
+**Fix.** Run it with both prefixes:
+
+<div class="highlight"><pre><span></span><code><span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
+</code></pre></div>
+
+That is: <em>period — space — period — backslash — <code>activate.ps1</code></em>. Four characters before the filename.
+
+If you also see <em>"running scripts is disabled on this system"</em>, run this once per machine:
+
+<div class="highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
+</code></pre></div>
+
+</details>
+
+<hr />
+<h2 id="working-setup-reference">Working setup reference</h2>
+<p>The two-command workflow once everything is in place:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="s2">&quot;C:\...\Codes&quot;</span>
+<span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
+<span class="n">julia</span> <span class="n">run_stockflow</span><span class="p">.</span><span class="n">jl</span>
+</code></pre></div>
+<p><code>activate.ps1</code> sets <code>JULIA_PROJECT</code> to <code>.\venv</code> (and, if you applied the long-path fix above, <code>JULIA_DEPOT_PATH</code> to a short path).</p>
+<p>A successful run ends with output like:</p>
+<div class="highlight"><pre><span></span><code>================ Steady state ================
+  b        =   0.500000
+  def      =   0.014563
+  prdef    =  -0.004854
+  intpay   =   0.019417
+  y        =   0.000000
+==============================================
+IRF chart saved to stockflow_irfs.png
+</code></pre></div>
+<hr />
+<p>For anything not covered here, reach out to <a href="mailto:asyakostanyan@thebetterpolicyproject.org">asyakostanyan@thebetterpolicyproject.org</a>.</p>
 
 
 
@@ -481,10 +790,11 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
