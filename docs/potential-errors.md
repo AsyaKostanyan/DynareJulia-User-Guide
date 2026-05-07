@@ -197,6 +197,111 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 ---
 
+## Perfect-foresight simulation (Dynare.jl 0.10.x)
+
+A few rough edges in the perfect-foresight subsystem of Dynare.jl 0.10.x. These bite if you port a model from MATLAB Dynare or follow older tutorials.
+
+<details>
+<summary><strong>perfect_foresight_setup / _solver run silently and produce no simulation</strong></summary>
+
+**You see this:** the model parses, the steady state computes correctly, no obvious error is thrown — but `context.results.model_results[1].simulations` is an **empty** <code>Vector{Simulation}</code>, and any attempt to read `simulations[1]` blows up with <code>BoundsError</code>. Earlier in the log, hidden in the parser output, you may also spot a stray:
+
+```
+MethodError(convert, (Float64, nothing), 0x...)
+```
+
+**Why it happens.** The legacy MATLAB-Dynare two-step pattern in the `.mod` file —
+
+```dynare
+perfect_foresight_setup(periods = 200);
+perfect_foresight_solver;
+```
+
+— is not parsed correctly in Dynare.jl 0.10.x. The keyword option `(periods = 200)` round-trips through a code path that produces `nothing` where a `Float64` is expected, the parser swallows the `MethodError`, and nothing populates the simulations vector.
+
+**Fix.** Use the modern single statement, with the trailing <code>!</code>:
+
+```dynare
+perfect_foresight!(periods = 200);
+```
+
+Drop both `perfect_foresight_setup` and `perfect_foresight_solver` from the `.mod` file. Same applies if you call from Julia — use <code>Dynare.perfect_foresight!(; context, periods = 200)</code>, not <code>Dynare.perfect_foresight_setup!</code> + <code>Dynare.perfect_foresight_solver!</code>.
+
+</details>
+
+---
+
+<details>
+<summary><strong>UndefVarError: <code>guess_values</code> not defined when using linearinterpolation</strong></summary>
+
+**You see this when calling <code>perfect_foresight!</code> with a non-default initialization:**
+
+```
+ERROR: LoadError: UndefVarError: `guess_values` not defined
+Stacktrace:
+ [1] perfect_foresight_initialization!(...)
+   @ Dynare .../perfectforesight/perfectforesight.jl:504
+```
+
+**Why it happens.** `Dynare.linearinterpolation` is declared as a value of the <code>InitializationAlgo</code> enum, but the corresponding branch in <code>perfect_foresight_initialization!</code> is empty — the local variable <code>guess_values</code> never gets assigned. Same story for <code>Dynare.firstorder</code>: it dispatches to <code>simul_first_order!</code>, which calls <code>compute_first_order_solution!</code> with the wrong number of arguments and crashes with <code>MethodError</code>.
+
+**Fix.** Of the four enum values — <code>initvalfile</code>, <code>steadystate</code>, <code>firstorder</code>, <code>linearinterpolation</code> — only <code>steadystate</code> (the default) actually works in 0.10.x. Don't pass <code>initialization_algo</code> at all, or pass <code>Dynare.steadystate</code> explicitly.
+
+If your problem is a long transition where the steady-state initial guess is too far from the true path, you can usually rescue convergence by setting the initial state with a <code>histval</code> block instead of trying to interpolate by hand:
+
+```dynare
+initval;
+    K = K_SS;       // guess for steady state, refined by `steady;` below
+    ...
+end;
+
+steady;
+
+histval;
+    K(0) = K_SS/2;  // initial state: K(-1) at half the steady-state level
+end;
+
+perfect_foresight!(periods = 200);
+```
+
+This pattern is also what Dynare.jl's own test models use (see <code>test/models/initialization/neoclassical1.mod</code> in the package).
+
+</details>
+
+---
+
+<details>
+<summary><strong>MethodError: Cannot <code>convert</code> an object of type Missing to an object of type Float64 (when plotting)</strong></summary>
+
+**You see this when extracting a simulation column for plotting:**
+
+```
+ERROR: LoadError: MethodError: Cannot `convert` an object of type Missing
+       to an object of type Float64
+Stacktrace:
+ [1] setindex!(A::Vector{Float64}, x::Missing, i1::Int64)
+ [2] copyto_unaliased!(...)
+ ...
+ [5] collect(::Type{Float64}, itr::AxisArrays.AxisVector{Union{Missing, Float64}, ...})
+```
+
+**Why it happens.** Perfect-foresight simulation tables in Dynare.jl come back typed as <code>Union{Missing, Float64}</code>: the boundary rows (period 0 and the period after the simulation horizon) can hold <code>missing</code> values for variables that aren't pinned at those points. <code>collect(Float64, ...)</code> can't convert <code>missing</code>, so it errors out.
+
+**Fix.** Replace <code>missing</code> with <code>NaN</code> before passing the column to Plots — Plots renders NaN as a gap in the line:
+
+```julia
+raw    = Tables.getcolumn(sim, :K)
+series = [ismissing(x) ? NaN : Float64(x) for x in raw]
+
+plot(0:length(series)-1, series; lw = 2, label = "K")
+```
+
+Use the same pattern (raw → coalesce-to-NaN → plot) for every variable you read out of a simulation table.
+
+</details>
+
+---
+
 ## Working setup reference
 
 The two-command workflow once everything is in place:
