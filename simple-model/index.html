@@ -15,11 +15,8 @@
         <link rel="next" href="../endocred/">
       
       
-        
-      
-      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -27,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
       
 
@@ -46,12 +43,11 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/custom.css">
-    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -203,14 +199,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
     
   </span>
-  
   
 
       </a>
@@ -230,14 +221,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
     
   </span>
-  
   
 
       </a>
@@ -257,14 +243,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Installation
-  
-
     
   </span>
-  
   
 
       </a>
@@ -284,14 +265,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Video Tutorials
-  
-
     
   </span>
-  
   
 
       </a>
@@ -320,14 +296,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Simple Model
-  
-
     
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -338,14 +309,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Simple Model
-  
-
     
   </span>
-  
   
 
       </a>
@@ -366,33 +332,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dynare-model-file-simplemod" class="md-nav__link">
+  <a href="#download-the-files" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        📄 Dynare Model File (simple.mod)
-      
+      Download the Files
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#download-the-model-file" class="md-nav__link">
+  <a href="#dynare-model-file-simple_linearmod" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Download the Model File
-      
+      📄 Dynare Model File (simple_linear.mod)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-model-in-julia" class="md-nav__link">
+  <a href="#running-the-model-in-julia-simple_linearjl" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        ▶️ Running the Model in Julia
-      
+      ▶️ Running the Model in Julia (simple_linear.jl)
     </span>
   </a>
   
@@ -418,14 +378,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     ENDOCRED
-  
-
     
   </span>
-  
   
 
       </a>
@@ -445,14 +400,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     GIMF
-  
-
     
   </span>
-  
   
 
       </a>
@@ -472,14 +422,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Potential Errors
-  
-
     
   </span>
-  
   
 
       </a>
@@ -499,14 +444,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     FAQ
-  
-
     
   </span>
-  
   
 
       </a>
@@ -541,33 +481,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#dynare-model-file-simplemod" class="md-nav__link">
+  <a href="#download-the-files" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        📄 Dynare Model File (simple.mod)
-      
+      Download the Files
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#download-the-model-file" class="md-nav__link">
+  <a href="#dynare-model-file-simple_linearmod" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Download the Model File
-      
+      📄 Dynare Model File (simple_linear.mod)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#running-the-model-in-julia" class="md-nav__link">
+  <a href="#running-the-model-in-julia-simple_linearjl" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        ▶️ Running the Model in Julia
-      
+      ▶️ Running the Model in Julia (simple_linear.jl)
     </span>
   </a>
   
@@ -583,7 +517,6 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -591,49 +524,254 @@
 
 
 <h1 id="simple-model">Simple Model</h1>
-<p>This page demonstrates how to run a basic macroeconomic model in DynareJulia using a <code>.mod</code> file and the <code>@dynare</code> macro.</p>
+<p>This page demonstrates how to run a simple linear macroeconomic model in DynareJulia using a <code>.mod</code> file and a Julia driver script. The model is a small, FPAS-style gap model with an endogenous credibility block, solved under perfect foresight.</p>
 <hr />
-<h2 id="dynare-model-file-simplemod">📄 Dynare Model File (<code>simple.mod</code>)</h2>
-<h2 id="download-the-model-file">Download the Model File</h2>
-<p><a href="../models/simple.mod">Download <code>simple.mod</code></a></p>
-<div class="highlight"><pre><span></span><code>var PIE, R, Y;
+<h2 id="download-the-files">Download the Files</h2>
+<p>Download both files and place them in the same project directory:</p>
+<ul>
+<li><a href="../models/simple_linear.mod"><code>simple_linear.mod</code></a> — the model file</li>
+<li><a href="../models/simple_linear.jl"><code>simple_linear.jl</code></a> — the Julia script that runs the model and plots the results</li>
+</ul>
+<hr />
+<h2 id="dynare-model-file-simple_linearmod">📄 Dynare Model File (<code>simple_linear.mod</code>)</h2>
+<pre><code class="language-mod">var 
+PIE             // QoQ Inflation 
+PIE4            // 1 year moving average of inflation  
+PIE_EXP         // Inflation Expectations
+C               // Credibility 
+SIGNAL_CBP      // CB Credibility Signal
+RES_PIE4_LOW    // 
+RES_PIE4_HIGH   // 
+Y               // Output gap
+RS              // Nominal interest rate
+RR              // Real interest rate
+RR_BAR          // Real interest rate trend
+RR_GAP          // Real interest rate gap
+UNR             // Unemployment rate
+UNR_GAP         // Unemployment GAP
+UNR_BAR         // Equilibrium Unemployment Rate (NAIRU)
+g_UNR           // Persistent component in NAIRU
+DL_GDP          // Real GDP, Q-o-Q Log Growth
+DL_GDP_BAR      // Potential GDP, Q-o-Q Log Growth
+G_GDP_BAR       // Persistent Component in Potential GDP Growth
+;
 
-varexo eps_Y;
+
+varexo 
+E_Y             // Output Gap shock
+E_PIE           // Inflation Shock
+E_DL_GDP_BAR    // Potential GDP Shock
+E_G_GDP_BAR     // Persistent Shock of Potential GDP Growth
+E_UNR_BAR       // NAIRU Shock 
+E_UNR_g         // Persistent Shock of NAIRU 
+E_UNR           // Unemployment Gap Shock 
+E_RS            // Interest Rate Shock
+E_RR_BAR        // Real Interest Rate Trend Shock
+E_PIE_EXP       // Shock to Inflation Expectations 
+E_C             // Credibility Shock 
+;
+
+parameters BETA1, BETA2, BETA3, LAMBDA1, LAMBDA2, GROWTH_SS, ALPHA1, ALPHA2, ALPHA3, ALPHA4,
+           ALPHA5, ALPHA6, ALPHA7, ALPHA8, PIE_SS, UNR_SS, RR_BAR_STAR, GAMMA1, GAMMA2, GAMMA4;
+
+BETA1 = 0.75;
+BETA2 = 0.15;
+BETA3 = 0.20;
+LAMBDA1 = 0.50;
+LAMBDA2 = 0.25;
+GROWTH_SS = 2.50;
+ALPHA1 = 0.90;
+ALPHA2 = 0.90;
+ALPHA3 = 0.90;
+ALPHA4 = 0.50;
+ALPHA5 = 0.80;
+ALPHA6 = 0.30;
+ALPHA7 = 0.15;
+ALPHA8 = 0.90;
+PIE_SS = 2.0;
+UNR_SS = 4.50;
+RR_BAR_STAR = 0.50;
+GAMMA1 = 0.50;
+GAMMA2 = 1.50;
+GAMMA4 = 0.20;
+
+
 
 model;
-  PIE = 0.5*PIE(-1) + 0.5*PIE(+1) + 0.5*Y;
-  Y   = 0.5*Y(-1) + 0.5*Y(+1) - 0.2*R + eps_Y;
-  R   = 1.5*PIE(+1) + 0.2*Y;
+
+Y = BETA1*Y(-1) + BETA2*Y(+1) - BETA3*RR_GAP(-1) + E_Y;
+
+PIE = LAMBDA1*PIE_EXP + (1 - LAMBDA1)*PIE4(-1) + LAMBDA2*Y(-1) + E_PIE;
+
+PIE_EXP = C*PIE4(+4) + (1 - C)*PIE4(-1) + 0.1*(1 - C) + E_PIE_EXP; 
+
+C = 0.04*SIGNAL_CBP + (1-0.04)*C(-1) + E_C;
+
+SIGNAL_CBP =  RES_PIE4_HIGH^2/(RES_PIE4_HIGH^2+RES_PIE4_LOW^2) ; 
+
+// RES_PIE4_LOW =    Actual           -          Forecast
+RES_PIE4_LOW =       PIE4    -      (   0.5*PIE_SS+0.5*PIE4(-1))   ;
+
+// RES_PIE4_HIGH =    Actual           -          Forecast
+RES_PIE4_HIGH =       PIE4    -      (   0.1*10 + 0.9*PIE4(-1))   ;
+
+PIE4 = 0.25*(PIE+PIE(-1)+PIE(-2)+PIE(-3));
+
+DL_GDP = DL_GDP_BAR + (Y - Y(-1));
+
+DL_GDP_BAR = ALPHA1*DL_GDP_BAR(-1) + (1-ALPHA1)*G_GDP_BAR + E_DL_GDP_BAR;
+
+G_GDP_BAR = ALPHA2*G_GDP_BAR(-1) + (1-ALPHA2)*GROWTH_SS + E_G_GDP_BAR;
+
+RR = RS-PIE(+1);
+
+RR_BAR = ALPHA3*RR_BAR(-1) + (1-ALPHA3)*RR_BAR_STAR + E_RR_BAR;
+
+RR_GAP = RR - RR_BAR;
+
+UNR_GAP = UNR_BAR - UNR;
+
+UNR_BAR = ALPHA8*UNR_BAR(-1) + (1-ALPHA8)*UNR_SS + g_UNR + E_UNR_BAR;
+
+g_UNR = (1-ALPHA4)*g_UNR(-1) + E_UNR_g;
+
+UNR_GAP = ALPHA5*UNR_GAP(-1) + ALPHA6*Y + ALPHA7*Y(+1) + E_UNR;
+
+RS = GAMMA1*RS(-1) + (1 - GAMMA1)*(RR_BAR + PIE4(+3) + GAMMA2*(PIE4(+3) - PIE_SS) + GAMMA4*Y) + E_RS;
+
 end;
 
-shocks;
-  var eps_Y; stderr 0.01;
+
+
+steady_state_model;
+PIE = PIE_SS;
+PIE4 = PIE_SS;
+Y = 0;
+G_GDP_BAR = GROWTH_SS;
+DL_GDP_BAR = GROWTH_SS;
+DL_GDP = GROWTH_SS;
+RR_BAR = RR_BAR_STAR;
+RR = RR_BAR_STAR;
+RR_GAP = 0;
+RS = RR + PIE;
+UNR = UNR_SS;
+UNR_GAP = 0;
+UNR_BAR = UNR_SS;
+g_UNR = 0;
+SIGNAL_CBP = 1;
+C = 1;
+PIE_EXP = PIE_SS;
+RES_PIE4_LOW = 0;
+RES_PIE4_HIGH = -0.8;
 end;
 
-check;
 
-stoch_simul(order = 1, irf = 25);
-</code></pre></div>
+
+steady;
+
+histval;
+C(0) = 0.95;
+Y(0) = 1.0;
+RS(0) = 4.3; // Average Effective Fed Funds Rate 2025Q1
+PIE(0) = 3.0; //2.1;  // Nowcast for Core PCE 2025Q1, QoQ Annualized, April 29, 2025
+UNR_BAR(0)  = 4.5;
+UNR(0)  = 4.1; //2025Q1
+UNR_GAP(0) = 0.4;
+end;
+
+
+scenario!(name = :E_PIE, period = 1, value = 1.0);
+scenario!(name = :E_PIE, period = 2, value = 0.8);
+scenario!(name = :E_PIE, period = 3, value = 0.5);
+scenario!(name = :E_Y, period = 1, value = -1.0);
+
+// simul(periods=80);
+perfect_foresight_setup(periods=80);
+perfect_foresight_solver(lmmcp);
+</code></pre>
 <p><strong>Description:</strong></p>
 <ul>
-<li><code>PIE</code>, <code>R</code>, and <code>Y</code> are endogenous variables.</li>
-<li><code>eps_Y</code> is an exogenous shock.</li>
-<li>The model has both forward- and backward-looking components.</li>
-<li>We use <code>stoch_simul</code> to simulate impulse response functions (IRFs).</li>
+<li>The model combines an output-gap (IS) equation, a Phillips curve, an endogenous <strong>credibility</strong> block (<code>C</code>, <code>SIGNAL_CBP</code>, <code>PIE_EXP</code>), unemployment/NAIRU dynamics, potential-GDP growth, and a forward-looking policy rule for the nominal rate <code>RS</code>.</li>
+<li>A <code>steady_state_model</code> block provides the analytical steady state, and <code>histval</code> sets the initial conditions (2025Q1).</li>
+<li>The <code>scenario!</code> statements impose a sequence of inflation (<code>E_PIE</code>) and output-gap (<code>E_Y</code>) shocks over the first periods.</li>
+<li>The model is solved under <strong>perfect foresight</strong> with the <code>lmmcp</code> (mixed complementarity) solver via <code>perfect_foresight_setup</code> / <code>perfect_foresight_solver</code>.</li>
 </ul>
-<h2 id="running-the-model-in-julia">▶️ Running the Model in Julia</h2>
-<p>Once you have <code>Dynare.jl</code> installed, you can run the model using the <code>@dynare</code> macro. This macro handles the entire process of parsing, solving, and simulating the model.</p>
-<p>In the terminal run:</p>
-<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">Dynare</span>
+<h2 id="running-the-model-in-julia-simple_linearjl">▶️ Running the Model in Julia (<code>simple_linear.jl</code>)</h2>
+<p>The driver script below activates a project environment, runs the model with the <code>@dynare</code> macro, extracts the simulation into a <code>DataFrame</code>, and plots key variables (<code>RS</code>, <code>Y</code>, <code>PIE</code>, <code>UNR</code>) on a quarterly time axis.</p>
+<pre><code class="language-julia">using Pkg
+Pkg.activate(&quot;venv&quot;)
 
-<span class="n">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nd">@dynare</span><span class="w"> </span><span class="s">&quot;simple.mod&quot;</span><span class="p">;</span>
-</code></pre></div>
+using Dynare
+using PATHSolver
+using DataFrames
+using Dates
+using Plots
+
+# --- Set backend ---
+gr()
+
+# --- Step 1: Define Model Files ---
+model_files = [
+    &quot;simple_linear.mod&quot;,
+]
+
+# --- Step 2: Run Dynare Models ---
+results = Dict{String, Any}()
+for model in model_files
+    if isfile(model)
+        println(&quot;Running model: &quot;, model)
+        results[model] = eval(Meta.parse(&quot;@dynare \&quot;$model\&quot;&quot;))
+        println(&quot;Finished: &quot;, model, &quot;\n&quot;)
+    else
+        println(&quot;Model file not found: &quot;, model)
+    end
+end
+
+# --- Step 3: Extract Data into DataFrames ---
+df_models = Dict()
+for model in keys(results)
+    df_models[model] = DataFrame(results[model].results.model_results[1].simulations[1].data)
+end
+
+# --- Step 4: Generate Quarterly Time Index (2025Q1–2035Q2) ---
+time_index = (Date(2025,2):Quarter(1):Date(2035,3))[1:40]
+formatted_labels = [string(year(d)) * &quot;-Q&quot; * string(month(d) ÷ 3 + 1) for d in time_index]
+
+# --- Step 5: Plot Variables and Colors ---
+variables_to_plot = [:RS, :Y, :PIE, :UNR]
+model_colors = Dict(
+    &quot;simple_linear.mod&quot; =&gt; :blue
+)
+
+# --- Step 6: Create 2x2 Grid Plot (No Legends) ---
+plot_grid = plot(layout=(2,2), size=(900,700), legend=false)
+
+for (i, var) in enumerate(variables_to_plot)
+    for (model, df) in df_models
+        if haskey(model_colors, model)
+            y = df[!, var][1:40]  # Use the full 40 quarters, starting from 2025Q1
+            plot!(1:40, y,
+                  label=&quot;&quot;, lw=2, color=model_colors[model],
+                  subplot=i, xrotation=90)
+        end
+    end
+    title!(subplot=i, string(var))
+    xticks!(subplot=i, 1:4:40, formatted_labels[1:4:40])
+end
+
+# --- Step 7: Save and Display ---
+savefig(plot_grid, &quot;simple_linear.png&quot;)
+display(plot_grid)
+</code></pre>
 <p><strong>This will:</strong></p>
 <ul>
-<li>Load and solve the model defined in <code>simple.mod</code></li>
-<li>Execute the <code>stoch_simul</code> block for impulse response simulation</li>
-<li>Store all output and diagnostics in the <code>context</code> variable</li>
+<li>Activate the <code>venv</code> project environment and load the required packages.</li>
+<li>Run <code>simple_linear.mod</code> through the <code>@dynare</code> macro, which parses, solves, and simulates the model.</li>
+<li>Collect the simulated paths into a <code>DataFrame</code>.</li>
+<li>Produce a 2×2 grid plot of the nominal interest rate (<code>RS</code>), output gap (<code>Y</code>), inflation (<code>PIE</code>), and unemployment rate (<code>UNR</code>), saved as <code>simple_linear.png</code>.</li>
 </ul>
+<p>!!! note
+    Make sure <code>simple_linear.mod</code> and <code>simple_linear.jl</code> are in the same directory, and run the script from that directory so the model file is found.</p>
 
 
 
@@ -682,11 +820,10 @@ stoch_simul(order = 1, irf = 25);
     
     
       
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>

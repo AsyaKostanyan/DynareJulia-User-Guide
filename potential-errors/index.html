@@ -15,11 +15,8 @@
         <link rel="next" href="../faq/">
       
       
-        
-      
-      
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
     
     
       
@@ -27,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.2afb09e1.min.css">
       
       
 
@@ -46,12 +43,11 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/custom.css">
-    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
+    
     
     
   </head>
@@ -203,14 +199,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Home
-  
-
     
   </span>
-  
   
 
       </a>
@@ -230,14 +221,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Getting Started
-  
-
     
   </span>
-  
   
 
       </a>
@@ -257,14 +243,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Installation
-  
-
     
   </span>
-  
   
 
       </a>
@@ -284,14 +265,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Video Tutorials
-  
-
     
   </span>
-  
   
 
       </a>
@@ -311,14 +287,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Simple Model
-  
-
     
   </span>
-  
   
 
       </a>
@@ -338,14 +309,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     ENDOCRED
-  
-
     
   </span>
-  
   
 
       </a>
@@ -365,14 +331,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     GIMF
-  
-
     
   </span>
-  
   
 
       </a>
@@ -401,14 +362,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Potential Errors
-  
-
     
   </span>
-  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -419,14 +375,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     Potential Errors
-  
-
     
   </span>
-  
   
 
       </a>
@@ -449,9 +400,7 @@
         <li class="md-nav__item">
   <a href="#perfect-foresight-simulation-dynarejl-010x" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Perfect-foresight simulation (Dynare.jl 0.10.x)
-      
+      Perfect-foresight simulation (Dynare.jl 0.10.x)
     </span>
   </a>
   
@@ -460,9 +409,7 @@
         <li class="md-nav__item">
   <a href="#working-setup-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Working setup reference
-      
+      Working setup reference
     </span>
   </a>
   
@@ -488,14 +435,9 @@
   
   
   <span class="md-ellipsis">
-    
-  
     FAQ
-  
-
     
   </span>
-  
   
 
       </a>
@@ -532,9 +474,7 @@
         <li class="md-nav__item">
   <a href="#perfect-foresight-simulation-dynarejl-010x" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Perfect-foresight simulation (Dynare.jl 0.10.x)
-      
+      Perfect-foresight simulation (Dynare.jl 0.10.x)
     </span>
   </a>
   
@@ -543,9 +483,7 @@
         <li class="md-nav__item">
   <a href="#working-setup-reference" class="md-nav__link">
     <span class="md-ellipsis">
-      
-        Working setup reference
-      
+      Working setup reference
     </span>
   </a>
   
@@ -561,7 +499,6 @@
           
           
             <div class="md-content" data-md-component="content">
-              
               <article class="md-content__inner md-typeset">
                 
                   
@@ -576,11 +513,13 @@
 
 **You see something like this when loading Dynare:**
 
-<div class="highlight"><pre><span></span><code>ERROR: LoadError: UndefVarError: `GeneralizedFirstOrderAlgorithm` not defined
+
+<pre><code>ERROR: LoadError: UndefVarError: `GeneralizedFirstOrderAlgorithm` not defined
    @ C:\Users\&lt;you&gt;\.julia\packages\Dynare\&lt;hash&gt;\src\global\types.jl:150
 in expression starting at .../Dynare.jl:1
 ERROR: Failed to precompile Dynare ...
-</code></pre></div>
+</code></pre>
+
 
 **Why it happens.** Dynare 0.10.0 referenced a symbol (<code>GeneralizedFirstOrderAlgorithm</code>) that the <code>NonlinearSolve</code> package later renamed. If your <code>Manifest.toml</code> pins Dynare 0.10.0 but Pkg resolves the rest of the dependency tree against the newest <code>NonlinearSolve</code>, the symbol is gone and Dynare fails to precompile.
 
@@ -590,23 +529,27 @@ This usually happens when a <code>Manifest.toml</code> was generated against an 
 
 In a PowerShell terminal at the project root:
 
-<div class="highlight"><pre><span></span><code><span class="c"># 1. Activate the project (sets JULIA_PROJECT to .\venv)</span>
-<span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
 
-<span class="c"># 2. Delete the lockfile</span>
-<span class="nb">Remove-Item</span> <span class="p">.\</span><span class="n">venv</span><span class="p">\</span><span class="n">Manifest</span><span class="p">.</span><span class="n">toml</span>
+<pre><code class="language-powershell"># 1. Activate the project (sets JULIA_PROJECT to .\venv)
+. .\activate.ps1
 
-<span class="c"># 3. Re-resolve and precompile</span>
-<span class="n">julia</span> <span class="n">-e</span> <span class="s2">&quot;using Pkg; Pkg.instantiate(); Pkg.precompile(); Pkg.status()&quot;</span>
-</code></pre></div>
+# 2. Delete the lockfile
+Remove-Item .\venv\Manifest.toml
+
+# 3. Re-resolve and precompile
+julia -e &quot;using Pkg; Pkg.instantiate(); Pkg.precompile(); Pkg.status()&quot;
+</code></pre>
+
 
 After this finishes, <code>Pkg.status()</code> should report:
 
-<div class="highlight"><pre><span></span><code>[a93c6f00] DataFrames v1.8.2
+
+<pre><code>[a93c6f00] DataFrames v1.8.2
 [5203de40] Dynare v0.10.4    &lt;-- was 0.10.0 before the fix
 [91a5bcdd] Plots v1.41.6
 [bd369af6] Tables v1.12.1
-</code></pre></div>
+</code></pre>
+
 
 If Dynare is still listed as 0.10.0, your <code>Project.toml</code> has a hard pin — remove the <code>[compat]</code> Dynare line and try again.
 
@@ -618,11 +561,13 @@ If Dynare is still listed as 0.10.0, your <code>Project.toml</code> has a hard p
 
 **You see this when running a model:**
 
-<div class="highlight"><pre><span></span><code>Starting preprocessing of the model file ...
-terminate called after throwing an instance of &#39;std::filesystem::__cxx11::filesystem_error&#39;
+
+<pre><code>Starting preprocessing of the model file ...
+terminate called after throwing an instance of 'std::filesystem::__cxx11::filesystem_error'
   what():  filesystem error: cannot remove: Access is denied [stockflow/model/json]
 ERROR: LoadError: type Array has no field results
-</code></pre></div>
+</code></pre>
+
 
 **Why it happens.** Two things together:
 
@@ -649,7 +594,8 @@ If you control the driver script, you can also add a <code>safe_rm()</code> help
 
 **You see a cascade of precompile failures:**
 
-<div class="highlight"><pre><span></span><code>Precompiling project...
+
+<pre><code>Precompiling project...
   ✗ GR_jll
   ✗ Qt6ShaderTools_jll
   ✗ GR
@@ -657,14 +603,17 @@ If you control the driver script, you can also add a <code>safe_rm()</code> help
   ✗ StatsPlots
   ✗ Dynare
   N dependencies errored.
-</code></pre></div>
+</code></pre>
+
 
 Notice the cascade: <code>GR_jll</code> is the root failure; everything else fails because it depends on <code>Plots</code> which depends on <code>GR</code>.
 
 **Why it happens.** Almost always Windows long-path limits. The default <code>MAX_PATH</code> is 260 characters. A depot path like:
 
-<div class="highlight"><pre><span></span><code>C:\Users\asyak\Dropbox\Work\The Better Policy Project\Courses\Thailand 2026\DSGE - Week 2\Codes\.julia\artifacts\&lt;40-char-hash&gt;\bin\gr\fonts\...
-</code></pre></div>
+
+<pre><code>C:\Users\asyak\Dropbox\Work\The Better Policy Project\Courses\Thailand 2026\DSGE - Week 2\Codes\.julia\artifacts\&lt;40-char-hash&gt;\bin\gr\fonts\...
+</code></pre>
+
 
 is already 165 characters before GR's nested folder structure starts. GR routinely overflows it.
 
@@ -674,16 +623,20 @@ is already 165 characters before GR's nested folder structure starts. GR routine
   <li>Edit <code>activate.ps1</code> to set:</li>
 </ol>
 
-<div class="highlight"><pre><span></span><code><span class="nv">$env:JULIA_DEPOT_PATH</span> <span class="p">=</span> <span class="s2">&quot;C:\jl-depots\thailand2026&quot;</span>
-</code></pre></div>
+
+<pre><code class="language-powershell">$env:JULIA_DEPOT_PATH = &quot;C:\jl-depots\thailand2026&quot;
+</code></pre>
+
 
 <ol start="2">
   <li>Re-activate and re-instantiate:</li>
 </ol>
 
-<div class="highlight"><pre><span></span><code><span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
-<span class="n">julia</span> <span class="n">-e</span> <span class="s2">&quot;using Pkg; Pkg.instantiate(); Pkg.precompile()&quot;</span>
-</code></pre></div>
+
+<pre><code class="language-powershell">. .\activate.ps1
+julia -e &quot;using Pkg; Pkg.instantiate(); Pkg.precompile()&quot;
+</code></pre>
+
 
 The <code>Project.toml</code> and <code>Manifest.toml</code> stay in <code>venv\</code> (small text files, fine in Dropbox). Only the multi-GB depot moves to a short path on the system drive.
 
@@ -697,22 +650,28 @@ The <code>Project.toml</code> and <code>Manifest.toml</code> stay in <code>venv\
 
 **You see one of these when plotting impulse responses:**
 
-<div class="highlight"><pre><span></span><code>ERROR: ArgumentError: invalid index: ! of type typeof(!)
-</code></pre></div>
+
+<pre><code>ERROR: ArgumentError: invalid index: ! of type typeof(!)
+</code></pre>
+
 
 or:
 
-<div class="highlight"><pre><span></span><code>MethodError: no method matching expand_extrema!(::Plots.Axis,
+
+<pre><code>MethodError: no method matching expand_extrema!(::Plots.Axis,
   ::AxisArrayTables.AxisArrayTable{Float64, ...})
-</code></pre></div>
+</code></pre>
+
 
 **Why it happens.** DynareJulia returns IRFs as <code>AxisArrayTable</code>, <strong>not</strong> <code>DataFrame</code>. DataFrame indexing syntax (<code>tbl[!, :col]</code> or <code>tbl[:, :col]</code>) does not work — <code>!</code> is a function, and <code>:</code> returns a one-column 2D table that <code>Plots</code> can't accept as a y-series.
 
 **Fix.** Use the Tables.jl column accessor and convert to a plain vector:
 
-<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="n">Tables</span>
-<span class="n">series</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">collect</span><span class="p">(</span><span class="kt">Float64</span><span class="p">,</span><span class="w"> </span><span class="n">Tables</span><span class="o">.</span><span class="n">getcolumn</span><span class="p">(</span><span class="n">irfs</span><span class="p">[</span><span class="n">shock</span><span class="p">],</span><span class="w"> </span><span class="ss">:b</span><span class="p">))</span>
-</code></pre></div>
+
+<pre><code class="language-julia">using Tables
+series = collect(Float64, Tables.getcolumn(irfs[shock], :b))
+</code></pre>
+
 
 This works whether the underlying type is <code>DataFrame</code>, <code>AxisArrayTable</code>, or anything else implementing the Tables.jl interface — so the script stays robust across Dynare versions.
 
@@ -724,23 +683,29 @@ This works whether the underlying type is <code>DataFrame</code>, <code>AxisArra
 
 **You see this in PowerShell:**
 
-<div class="highlight"><pre><span></span><code>activate.ps1 : The term &#39;activate.ps1&#39; is not recognized as the name of a
+
+<pre><code>activate.ps1 : The term 'activate.ps1' is not recognized as the name of a
 cmdlet, function, script file, or operable program.
-</code></pre></div>
+</code></pre>
+
 
 **Why it happens.** PowerShell will not run a script in the current folder unless you prefix it with <code>.\</code>. And to keep the environment variables in your shell (rather than throwing them away in a child process), you also need to <em>dot-source</em> the script with a leading <code>.&nbsp;</code> (period + space).
 
 **Fix.** Run it with both prefixes:
 
-<div class="highlight"><pre><span></span><code><span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
-</code></pre></div>
+
+<pre><code class="language-powershell">. .\activate.ps1
+</code></pre>
+
 
 That is: <em>period — space — period — backslash — <code>activate.ps1</code></em>. Four characters before the filename.
 
 If you also see <em>"running scripts is disabled on this system"</em>, run this once per machine:
 
-<div class="highlight"><pre><span></span><code><span class="nb">Set-ExecutionPolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-ExecutionPolicy</span> <span class="n">RemoteSigned</span>
-</code></pre></div>
+
+<pre><code class="language-powershell">Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+</code></pre>
+
 
 </details>
 
@@ -752,21 +717,27 @@ If you also see <em>"running scripts is disabled on this system"</em>, run this 
 
 **You see this:** the model parses, the steady state computes correctly, no obvious error is thrown — but `context.results.model_results[1].simulations` is an **empty** <code>Vector{Simulation}</code>, and any attempt to read `simulations[1]` blows up with <code>BoundsError</code>. Earlier in the log, hidden in the parser output, you may also spot a stray:
 
-<div class="highlight"><pre><span></span><code>MethodError(convert, (Float64, nothing), 0x...)
-</code></pre></div>
+
+<pre><code>MethodError(convert, (Float64, nothing), 0x...)
+</code></pre>
+
 
 **Why it happens.** The legacy MATLAB-Dynare two-step pattern in the `.mod` file —
 
-<div class="highlight"><pre><span></span><code>perfect_foresight_setup(periods = 200);
+
+<pre><code class="language-dynare">perfect_foresight_setup(periods = 200);
 perfect_foresight_solver;
-</code></pre></div>
+</code></pre>
+
 
 — is not parsed correctly in Dynare.jl 0.10.x. The keyword option `(periods = 200)` round-trips through a code path that produces `nothing` where a `Float64` is expected, the parser swallows the `MethodError`, and nothing populates the simulations vector.
 
 **Fix.** Use the modern single statement, with the trailing <code>!</code>:
 
-<div class="highlight"><pre><span></span><code>perfect_foresight!(periods = 200);
-</code></pre></div>
+
+<pre><code class="language-dynare">perfect_foresight!(periods = 200);
+</code></pre>
+
 
 Drop both `perfect_foresight_setup` and `perfect_foresight_solver` from the `.mod` file. Same applies if you call from Julia — use <code>Dynare.perfect_foresight!(; context, periods = 200)</code>, not <code>Dynare.perfect_foresight_setup!</code> + <code>Dynare.perfect_foresight_solver!</code>.
 
@@ -778,11 +749,13 @@ Drop both `perfect_foresight_setup` and `perfect_foresight_solver` from the `.mo
 
 **You see this when calling <code>perfect_foresight!</code> with a non-default initialization:**
 
-<div class="highlight"><pre><span></span><code>ERROR: LoadError: UndefVarError: `guess_values` not defined
+
+<pre><code>ERROR: LoadError: UndefVarError: `guess_values` not defined
 Stacktrace:
  [1] perfect_foresight_initialization!(...)
    @ Dynare .../perfectforesight/perfectforesight.jl:504
-</code></pre></div>
+</code></pre>
+
 
 **Why it happens.** `Dynare.linearinterpolation` is declared as a value of the <code>InitializationAlgo</code> enum, but the corresponding branch in <code>perfect_foresight_initialization!</code> is empty — the local variable <code>guess_values</code> never gets assigned. Same story for <code>Dynare.firstorder</code>: it dispatches to <code>simul_first_order!</code>, which calls <code>compute_first_order_solution!</code> with the wrong number of arguments and crashes with <code>MethodError</code>.
 
@@ -790,7 +763,8 @@ Stacktrace:
 
 If your problem is a long transition where the steady-state initial guess is too far from the true path, you can usually rescue convergence by setting the initial state with a <code>histval</code> block instead of trying to interpolate by hand:
 
-<div class="highlight"><pre><span></span><code>initval;
+
+<pre><code class="language-dynare">initval;
     K = K_SS;       // guess for steady state, refined by `steady;` below
     ...
 end;
@@ -802,7 +776,8 @@ histval;
 end;
 
 perfect_foresight!(periods = 200);
-</code></pre></div>
+</code></pre>
+
 
 This pattern is also what Dynare.jl's own test models use (see <code>test/models/initialization/neoclassical1.mod</code> in the package).
 
@@ -814,24 +789,28 @@ This pattern is also what Dynare.jl's own test models use (see <code>test/models
 
 **You see this when extracting a simulation column for plotting:**
 
-<div class="highlight"><pre><span></span><code>ERROR: LoadError: MethodError: Cannot `convert` an object of type Missing
+
+<pre><code>ERROR: LoadError: MethodError: Cannot `convert` an object of type Missing
        to an object of type Float64
 Stacktrace:
  [1] setindex!(A::Vector{Float64}, x::Missing, i1::Int64)
  [2] copyto_unaliased!(...)
  ...
  [5] collect(::Type{Float64}, itr::AxisArrays.AxisVector{Union{Missing, Float64}, ...})
-</code></pre></div>
+</code></pre>
+
 
 **Why it happens.** Perfect-foresight simulation tables in Dynare.jl come back typed as <code>Union{Missing, Float64}</code>: the boundary rows (period 0 and the period after the simulation horizon) can hold <code>missing</code> values for variables that aren't pinned at those points. <code>collect(Float64, ...)</code> can't convert <code>missing</code>, so it errors out.
 
 **Fix.** Replace <code>missing</code> with <code>NaN</code> before passing the column to Plots — Plots renders NaN as a gap in the line:
 
-<div class="highlight"><pre><span></span><code><span class="n">raw</span><span class="w">    </span><span class="o">=</span><span class="w"> </span><span class="n">Tables</span><span class="o">.</span><span class="n">getcolumn</span><span class="p">(</span><span class="n">sim</span><span class="p">,</span><span class="w"> </span><span class="ss">:K</span><span class="p">)</span>
-<span class="n">series</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">ismissing</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nb">NaN</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">Float64</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">raw</span><span class="p">]</span>
 
-<span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">series</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">series</span><span class="p">;</span><span class="w"> </span><span class="n">lw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;K&quot;</span><span class="p">)</span>
-</code></pre></div>
+<pre><code class="language-julia">raw    = Tables.getcolumn(sim, :K)
+series = [ismissing(x) ? NaN : Float64(x) for x in raw]
+
+plot(0:length(series)-1, series; lw = 2, label = &quot;K&quot;)
+</code></pre>
+
 
 Use the same pattern (raw → coalesce-to-NaN → plot) for every variable you read out of a simulation table.
 
@@ -840,13 +819,13 @@ Use the same pattern (raw → coalesce-to-NaN → plot) for every variable you r
 <hr />
 <h2 id="working-setup-reference">Working setup reference</h2>
 <p>The two-command workflow once everything is in place:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd </span><span class="s2">&quot;C:\...\Codes&quot;</span>
-<span class="p">.</span> <span class="p">.\</span><span class="n">activate</span><span class="p">.</span><span class="n">ps1</span>
-<span class="n">julia</span> <span class="n">run_stockflow</span><span class="p">.</span><span class="n">jl</span>
-</code></pre></div>
+<pre><code class="language-powershell">cd &quot;C:\...\Codes&quot;
+. .\activate.ps1
+julia run_stockflow.jl
+</code></pre>
 <p><code>activate.ps1</code> sets <code>JULIA_PROJECT</code> to <code>.\venv</code> (and, if you applied the long-path fix above, <code>JULIA_DEPOT_PATH</code> to a short path).</p>
 <p>A successful run ends with output like:</p>
-<div class="highlight"><pre><span></span><code>================ Steady state ================
+<pre><code>================ Steady state ================
   b        =   0.500000
   def      =   0.014563
   prdef    =  -0.004854
@@ -854,7 +833,7 @@ Use the same pattern (raw → coalesce-to-NaN → plot) for every variable you r
   y        =   0.000000
 ==============================================
 IRF chart saved to stockflow_irfs.png
-</code></pre></div>
+</code></pre>
 <hr />
 <p>For anything not covered here, reach out to <a href="mailto:asyakostanyan@thebetterpolicyproject.org">asyakostanyan@thebetterpolicyproject.org</a>.</p>
 
@@ -905,11 +884,10 @@ IRF chart saved to stockflow_irfs.png
     
     
       
-      
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8b220af.min.js"></script>
       
     
   </body>
